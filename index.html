@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verdant Wellness — Health Education & Lifestyle Guidance</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --sage:#5C7A5F;--sage-light:#8FAB91;--sage-pale:#EEF4EE;--sage-deep:#3A5C3D;
+    --cream:#F9F6F0;--warm-white:#FDFCF9;--earth:#A08060;--earth-light:#D4BC9E;
+    --text-dark:#1A2420;--text-mid:#4A5C50;--text-light:#8A9E8E;
+    --accent:#C4874A;--border:#E4EDE4;
+    --ff-display:'Cormorant Garamond',Georgia,serif;
+    --ff-body:'DM Sans','Segoe UI',sans-serif;
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:var(--ff-body);color:var(--text-dark);background:var(--warm-white);overflow-x:hidden}
+  
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,252,249,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 5%}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1200px;margin:0 auto}
+  .logo{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--sage-deep);letter-spacing:0.02em}
+  .logo span{color:var(--accent)}
+  .nav-links{display:flex;gap:2rem;list-style:none}
+  .nav-links a{font-size:0.875rem;font-weight:400;color:var(--text-mid);text-decoration:none;letter-spacing:0.03em;transition:color 0.2s}
+  .nav-links a:hover{color:var(--sage-deep)}
+  .nav-cta{background:var(--sage);color:white;border:none;padding:0.55rem 1.25rem;border-radius:24px;font-family:var(--ff-body);font-size:0.8rem;font-weight:500;cursor:pointer;letter-spacing:0.04em;transition:background 0.2s}
+  .nav-cta:hover{background:var(--sage-deep)}
+  .nav-menu-btn{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
+  .nav-menu-btn span{display:block;width:22px;height:1.5px;background:var(--text-dark)}
+  
+  /* SECTIONS */
+  section{padding:6rem 5%;max-width:1200px;margin:0 auto}
+  .section-label{font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:1rem}
+  .section-title{font-family:var(--ff-display);font-size:2.8rem;font-weight:300;line-height:1.2;color:var(--text-dark);margin-bottom:1.5rem}
+  .section-sub{font-size:1rem;color:var(--text-mid);line-height:1.8;max-width:560px}
+  
+  /* HERO */
+  .hero-wrap{max-width:1200px;margin:0 auto;padding:9rem 5% 5rem}
+  .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);border:1px solid var(--sage-light);padding:0.4rem 1rem;border-radius:20px;margin-bottom:2rem}
+  .hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--sage)}
+  h1{font-family:var(--ff-display);font-size:3.6rem;font-weight:300;line-height:1.15;color:var(--text-dark);margin-bottom:1.5rem}
+  h1 em{font-style:italic;color:var(--sage-deep)}
+  .hero-sub{font-size:1.05rem;line-height:1.85;color:var(--text-mid);margin-bottom:2.5rem;max-width:480px}
+  .btn-row{display:flex;gap:1rem;flex-wrap:wrap}
+  .btn-primary{background:var(--sage);color:white;border:none;padding:0.85rem 1.8rem;border-radius:30px;font-family:var(--ff-body);font-size:0.875rem;font-weight:500;cursor:pointer;letter-spacing:0.03em;transition:all 0.2s}
+  .btn-primary:hover{background:var(--sage-deep);transform:translateY(-1px)}
+  .btn-outline{background:transparent;color:var(--sage-deep);border:1.5px solid var(--sage-light);padding:0.85rem 1.8rem;border-radius:30px;font-family:var(--ff-body);font-size:0.875rem;font-weight:400;cursor:pointer;letter-spacing:0.03em;transition:all 0.2s}
+  .btn-outline:hover{background:var(--sage-pale);border-color:var(--sage)}
+  .hero-stats{display:flex;gap:2.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--border)}
+  .stat strong{display:block;font-family:var(--ff-display);font-size:2rem;font-weight:400;color:var(--text-dark)}
+  .stat span{font-size:0.8rem;color:var(--text-light);letter-spacing:0.04em}
+  
+  /* HERO IMAGE */
+  .hero-image-wrap{position:relative}
+  .hero-img-bg{background:linear-gradient(135deg,var(--sage-pale) 0%,#E8F0D4 100%);border-radius:24px 24px 120px 24px;overflow:hidden;aspect-ratio:4/5;display:flex;align-items:flex-end;justify-content:center;position:relative}
+  .hero-img-illustration{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding:2rem}
+  .hero-badge{position:absolute;top:2rem;right:-1.5rem;background:white;border-radius:16px;padding:1rem 1.25rem;box-shadow:0 8px 32px rgba(92,122,95,0.15);font-size:0.8rem}
+  .hero-badge strong{display:block;color:var(--sage-deep);font-weight:500}
+  .hero-badge span{color:var(--text-light);font-size:0.7rem}
+  .hero-badge-2{position:absolute;bottom:2rem;left:-1.5rem;background:var(--sage-deep);border-radius:16px;padding:1rem 1.25rem;color:white;font-size:0.8rem}
+  .hero-badge-2 strong{display:block;font-weight:500}
+  .hero-badge-2 span{opacity:0.7;font-size:0.7rem}
+  
+  /* LEAF SVG */
+  .leaf-deco{position:absolute;opacity:0.15}
+  
+  /* TOPICS STRIP */
+  .topics-strip{background:var(--sage-pale);padding:2.5rem 0;overflow:hidden;position:relative}
+  .topics-inner{max-width:1200px;margin:0 auto;padding:0 5%}
+  .topics-track{display:flex;gap:1rem;flex-wrap:wrap}
+  .topic-chip{display:inline-flex;align-items:center;gap:0.5rem;background:white;border:1px solid var(--border);border-radius:20px;padding:0.5rem 1.1rem;font-size:0.8rem;color:var(--text-mid);white-space:nowrap;cursor:pointer;transition:all 0.2s}
+  .topic-chip:hover{border-color:var(--sage);color:var(--sage-deep);background:var(--sage-pale)}
+  .topic-chip::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--sage-light)}
+  
+  /* ARTICLES */
+  .articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+  .article-card{background:white;border-radius:20px;overflow:hidden;border:1px solid var(--border);transition:all 0.3s;cursor:pointer}
+  .article-card:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(92,122,95,0.12)}
+  .article-img{height:200px;display:flex;align-items:center;justify-content:center;font-size:3rem;position:relative}
+  .article-img-green{background:linear-gradient(135deg,#C8DEC2,#8FAB91)}
+  .article-img-blue{background:linear-gradient(135deg,#C2D4DE,#8AABBE)}
+  .article-img-gold{background:linear-gradient(135deg,#DED4C2,#BEAA8A)}
+  .article-meta{display:flex;align-items:center;gap:1rem;padding:1.25rem 1.25rem 0}
+  .article-cat{font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);font-weight:500}
+  .article-time{font-size:0.7rem;color:var(--text-light)}
+  .article-title{font-family:var(--ff-display);font-size:1.3rem;font-weight:400;line-height:1.35;padding:0.75rem 1.25rem 0.5rem;color:var(--text-dark)}
+  .article-excerpt{font-size:0.85rem;line-height:1.7;color:var(--text-mid);padding:0 1.25rem 1.25rem}
+  .article-cta{display:flex;align-items:center;gap:0.4rem;font-size:0.8rem;color:var(--sage-deep);font-weight:500;padding:0 1.25rem 1.25rem;text-decoration:none;cursor:pointer}
+  .article-cta::after{content:'→';transition:transform 0.2s}
+  .article-card:hover .article-cta::after{transform:translateX(4px)}
+  
+  /* PHILOSOPHY */
+  .philosophy-wrap{background:var(--sage-deep);border-radius:32px;padding:5rem;margin:4rem 0;position:relative;overflow:hidden}
+  .philosophy-wrap::before{content:'';position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;border:60px solid rgba(255,255,255,0.05)}
+  .philosophy-wrap::after{content:'';position:absolute;bottom:-60px;left:-60px;width:200px;height:200px;border-radius:50%;border:40px solid rgba(255,255,255,0.05)}
+  .philo-label{color:rgba(255,255,255,0.5);font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1rem}
+  .philo-title{font-family:var(--ff-display);font-size:2.6rem;font-weight:300;color:white;line-height:1.2;margin-bottom:3rem;font-style:italic}
+  .philo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+  .philo-item{border-left:1px solid rgba(255,255,255,0.2);padding-left:1.5rem}
+  .philo-num{font-family:var(--ff-display);font-size:2rem;font-weight:300;color:rgba(255,255,255,0.3);margin-bottom:0.5rem}
+  .philo-h{font-size:1rem;color:white;font-weight:500;margin-bottom:0.5rem}
+  .philo-p{font-size:0.85rem;line-height:1.7;color:rgba(255,255,255,0.6)}
+  
+  /* PRODUCTS */
+  .products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+  .product-card{background:white;border-radius:24px;padding:2rem;border:1px solid var(--border);transition:all 0.3s;position:relative;overflow:hidden}
+  .product-card::before{content:'';position:absolute;top:0;right:0;width:120px;height:120px;border-radius:0 24px 0 120px;background:var(--sage-pale);z-index:0}
+  .product-card:hover{box-shadow:0 20px 48px rgba(92,122,95,0.12);border-color:var(--sage-light);transform:translateY(-2px)}
+  .product-icon{width:60px;height:60px;background:var(--sage-pale);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:1.25rem;position:relative;z-index:1}
+  .product-tag{font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:0.75rem;position:relative;z-index:1}
+  .product-name{font-family:var(--ff-display);font-size:1.4rem;font-weight:400;color:var(--text-dark);margin-bottom:0.75rem;position:relative;z-index:1}
+  .product-desc{font-size:0.85rem;line-height:1.75;color:var(--text-mid);margin-bottom:1.25rem;position:relative;z-index:1}
+  .product-ingredients{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem;position:relative;z-index:1}
+  .ingredient-tag{font-size:0.7rem;background:var(--sage-pale);color:var(--sage-deep);border-radius:10px;padding:0.25rem 0.6rem}
+  .product-btn{display:inline-flex;align-items:center;gap:0.4rem;background:var(--sage);color:white;border:none;padding:0.7rem 1.4rem;border-radius:24px;font-family:var(--ff-body);font-size:0.8rem;font-weight:500;cursor:pointer;letter-spacing:0.03em;transition:background 0.2s;position:relative;z-index:1}
+  .product-btn:hover{background:var(--sage-deep)}
+  .product-disclaimer{font-size:0.65rem;color:var(--text-light);margin-top:0.75rem;line-height:1.5;position:relative;z-index:1}
+  
+  /* TESTIMONIALS */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+  .testi-card{background:white;border-radius:20px;padding:2rem;border:1px solid var(--border)}
+  .testi-stars{color:var(--accent);font-size:1rem;margin-bottom:1rem;letter-spacing:2px}
+  .testi-quote{font-family:var(--ff-display);font-size:1.1rem;font-weight:300;font-style:italic;line-height:1.6;color:var(--text-dark);margin-bottom:1.25rem}
+  .testi-author{display:flex;align-items:center;gap:0.75rem}
+  .testi-avatar{width:38px;height:38px;border-radius:50%;background:var(--sage-pale);display:flex;align-items:center;justify-content:center;font-size:0.85rem;font-weight:500;color:var(--sage-deep)}
+  .testi-name{font-size:0.85rem;font-weight:500;color:var(--text-dark)}
+  .testi-loc{font-size:0.75rem;color:var(--text-light)}
+  
+  /* NEWSLETTER */
+  .newsletter-wrap{background:var(--cream);border-radius:32px;padding:4rem;text-align:center;border:1px solid var(--border);margin:2rem 0}
+  .newsletter-wrap .section-title{margin-bottom:0.75rem}
+  .nl-sub{font-size:1rem;color:var(--text-mid);margin-bottom:2rem}
+  .nl-form{display:flex;gap:0.75rem;max-width:480px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+  .nl-input{flex:1;min-width:220px;border:1px solid var(--border);border-radius:28px;padding:0.85rem 1.4rem;font-family:var(--ff-body);font-size:0.9rem;color:var(--text-dark);outline:none;background:white;transition:border 0.2s}
+  .nl-input:focus{border-color:var(--sage)}
+  .nl-btn{background:var(--sage-deep);color:white;border:none;padding:0.85rem 1.6rem;border-radius:28px;font-family:var(--ff-body);font-size:0.875rem;font-weight:500;cursor:pointer;white-space:nowrap;transition:background 0.2s}
+  .nl-btn:hover{background:var(--sage)}
+  .nl-note{font-size:0.75rem;color:var(--text-light);margin-top:0.75rem}
+  
+  /* WHATSAPP */
+  .wa-section{background:var(--sage);border-radius:28px;padding:3.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin:2rem 0}
+  .wa-text h3{font-family:var(--ff-display);font-size:2rem;font-weight:400;color:white;margin-bottom:0.5rem}
+  .wa-text p{color:rgba(255,255,255,0.7);font-size:0.95rem}
+  .wa-btn{display:inline-flex;align-items:center;gap:0.75rem;background:white;color:var(--sage-deep);border:none;padding:1rem 1.8rem;border-radius:30px;font-family:var(--ff-body);font-size:0.9rem;font-weight:500;cursor:pointer;transition:all 0.2s;white-space:nowrap}
+  .wa-btn:hover{background:var(--cream);transform:translateY(-2px)}
+  .wa-icon{width:24px;height:24px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:0.9rem}
+  
+  /* ABOUT STRIP */
+  .about-strip{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;padding:5rem 0}
+  .about-img-area{background:linear-gradient(160deg,var(--sage-pale),#E0EDDA);border-radius:24px 24px 80px 24px;min-height:420px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .about-center-gfx{text-align:center;padding:2rem}
+  .about-initials{font-family:var(--ff-display);font-size:5rem;font-weight:300;color:var(--sage-light);line-height:1;margin-bottom:1rem}
+  .about-title-gfx{font-family:var(--ff-display);font-size:1.2rem;font-weight:400;color:var(--sage-deep)}
+  .about-sub-gfx{font-size:0.8rem;color:var(--sage);letter-spacing:0.05em}
+  .about-floating{position:absolute;background:white;border-radius:14px;padding:0.85rem 1rem;box-shadow:0 8px 24px rgba(92,122,95,0.15);font-size:0.8rem}
+  .about-floating.top-right{top:1.5rem;right:1.5rem}
+  .about-floating.bottom-left{bottom:1.5rem;left:1.5rem}
+  .about-floating strong{display:block;font-weight:500;color:var(--text-dark)}
+  .about-floating span{color:var(--text-light);font-size:0.7rem}
+  .about-content .section-title{margin-bottom:1rem}
+  .about-content p{font-size:0.95rem;line-height:1.85;color:var(--text-mid);margin-bottom:1.5rem}
+  .about-values{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-top:2rem}
+  .about-value{display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--text-mid)}
+  .about-value::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--sage);flex-shrink:0}
+  
+  /* DISCLAIMER */
+  .disclaimer-bar{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;font-size:0.78rem;line-height:1.7;color:var(--text-light);margin:2rem 0}
+  .disclaimer-bar strong{color:var(--text-mid)}
+  
+  /* FOOTER */
+  footer{background:var(--text-dark);color:rgba(255,255,255,0.6);padding:4rem 5% 2rem}
+  .footer-inner{max-width:1200px;margin:0 auto}
+  .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,0.1)}
+  .footer-brand .logo{color:var(--sage-light);display:block;margin-bottom:1rem}
+  .footer-brand p{font-size:0.85rem;line-height:1.75;color:rgba(255,255,255,0.45);max-width:280px}
+  .footer-col h4{font-size:0.75rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1.25rem}
+  .footer-links{list-style:none}
+  .footer-links li{margin-bottom:0.6rem}
+  .footer-links a{font-size:0.85rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;cursor:pointer}
+  .footer-links a:hover{color:var(--sage-light)}
+  .footer-bottom{display:flex;align-items:center;justify-content:space-between;font-size:0.78rem;color:rgba(255,255,255,0.3)}
+  .footer-socials{display:flex;gap:0.75rem}
+  .social-btn{width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.2s}
+  .social-btn:hover{border-color:var(--sage-light);color:var(--sage-light)}
+  
+  /* FLOATING WA */
+  .float-wa{position:fixed;bottom:2rem;right:2rem;width:54px;height:54px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,0.4);cursor:pointer;z-index:200;transition:all 0.2s}
+  .float-wa:hover{transform:scale(1.1)}
+  .float-wa svg{fill:white;width:26px;height:26px}
+  
+  /* MOBILE */
+  @media(max-width:900px){
+    .hero-grid,.about-strip{grid-template-columns:1fr;gap:3rem}
+    .articles-grid,.products-grid,.testi-grid,.philo-grid{grid-template-columns:1fr 1fr}
+    .footer-top{grid-template-columns:1fr 1fr}
+    h1{font-size:2.6rem}
+    .philosophy-wrap{padding:3rem 2rem}
+    .philo-title{font-size:2rem}
+    .wa-section{text-align:center;justify-content:center}
+    .hero-badge,.hero-badge-2{display:none}
+  }
+  @media(max-width:600px){
+    nav{padding:0 4%}
+    .nav-links{display:none}
+    .nav-menu-btn{display:flex}
+    .hero-wrap,section{padding-left:4%;padding-right:4%}
+    .articles-grid,.products-grid,.testi-grid,.philo-grid,.about-values{grid-template-columns:1fr}
+    h1{font-size:2rem}
+    .section-title{font-size:2rem}
+    .footer-top{grid-template-columns:1fr}
+    .philosophy-wrap{border-radius:20px;padding:2.5rem 1.5rem}
+  }
+  
+  /* ANIMATIONS */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  .hero-grid{animation:fadeUp 0.8s ease both}
+  .hero-badge{animation:floatY 4s ease-in-out infinite 1s}
+  .hero-badge-2{animation:floatY 4s ease-in-out infinite 2s}
+  .float-wa{animation:floatY 3s ease-in-out infinite}
+
+/* ============================================
+   HUBSPOT FORM STYLING
+   Overrides default HubSpot styles to match
+   the Verdant Wellness design system
+   ============================================ */
+
+.hs-form-frame {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* Email input field */
+.hs-form input[type=email] {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 0.85rem 1.4rem;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+/* Submit button */
+.hs-form input[type=submit] {
+  background: var(--sage-deep);
+  color: white;
+  border: none;
+  padding: 0.85rem 1.6rem;
+  border-radius: 28px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+/* ============================================
+   END HUBSPOT FORM STYLING
+   ============================================ */
+
+</style>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8X5BFMKN4P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8X5BFMKN4P');
+</script>
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Verdant<span>.</span>Wellness</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#articles">Articles</a></li>
+      <li><a href="#products">Wellness Support</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta">Join Community</button>
+    <button class="nav-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero-wrap" id="home">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">Wellness Education Platform</div>
+      <h1>Helping You Build <em>Better Health</em>, One Habit at a Time</h1>
+      <p class="hero-sub">Evidence-aware nutrition guidance, weekly health awareness articles, and lifestyle support — because prevention is always more powerful than cure.</p>
+      <div class="btn-row">
+        <button class="btn-primary" onclick="document.getElementById('articles').scrollIntoView({behavior:'smooth'})">Read Health Articles</button>
+        <button class="btn-outline" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Explore Wellness Support</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>50+</strong><span>Health Topics</span></div>
+        <div class="stat"><strong>3×</strong><span>Weekly Articles</span></div>
+        <div class="stat"><strong>1,200+</strong><span>Community Members</span></div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <div class="hero-img-bg">
+        <svg viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;top:0;left:0;opacity:0.6">
+          <circle cx="160" cy="160" r="120" fill="rgba(92,122,95,0.12)"/>
+          <circle cx="200" cy="200" r="80" fill="rgba(143,171,145,0.12)"/>
+          <ellipse cx="140" cy="300" rx="70" ry="50" fill="rgba(92,122,95,0.08)"/>
+        </svg>
+        <div class="hero-img-illustration">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width:180px;opacity:0.7;margin-bottom:1rem">
+            <path d="M100 20 C120 40 160 60 160 100 C160 140 130 170 100 180 C70 170 40 140 40 100 C40 60 80 40 100 20Z" fill="rgba(92,122,95,0.3)" stroke="#5C7A5F" stroke-width="1.5" fill-rule="evenodd"/>
+            <path d="M100 40 C115 55 140 75 140 100 C140 130 120 155 100 162 C80 155 60 130 60 100 C60 75 85 55 100 40Z" fill="rgba(92,122,95,0.2)" stroke="#8FAB91" stroke-width="1"/>
+            <line x1="100" y1="40" x2="100" y2="160" stroke="#5C7A5F" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+          </svg>
+          <div style="text-align:center;padding:0 1rem 1rem">
+            <div style="font-family:var(--ff-display);font-size:1.4rem;font-weight:300;color:var(--sage-deep)">Your Wellness Journey</div>
+            <div style="font-size:0.8rem;color:var(--text-mid);margin-top:0.25rem">Starts with education</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <strong>Weekly Articles</strong>
+        <span>Published every week</span>
+      </div>
+      <div class="hero-badge-2">
+        <strong>Free to Read</strong>
+        <span>No subscription needed</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOPICS STRIP -->
+<div class="topics-strip">
+  <div class="topics-inner">
+    <div style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);margin-bottom:1rem;font-weight:500">Browse Health Topics</div>
+    <div class="topics-track">
+      <div class="topic-chip">Immune Health</div>
+      <div class="topic-chip">High Blood Pressure</div>
+      <div class="topic-chip">Diabetes Awareness</div>
+      <div class="topic-chip">Digestive Health</div>
+      <div class="topic-chip">Men's Health</div>
+      <div class="topic-chip">Women's Health</div>
+      <div class="topic-chip">Healthy Ageing</div>
+      <div class="topic-chip">Energy & Fatigue</div>
+      <div class="topic-chip">Stress & Sleep</div>
+      <div class="topic-chip">Heart Health</div>
+      <div class="topic-chip">Nutrition</div>
+      <div class="topic-chip">Preventive Wellness</div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLES -->
+<section id="articles">
+  <div class="section-label">Weekly Health Awareness</div>
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap">
+    <h2 class="section-title" style="margin-bottom:0">Latest Health Articles</h2>
+    <button class="btn-outline" style="flex-shrink:0">View All Articles</button>
+  </div>
+  <div class="articles-grid">
+    
+    <div class="article-card">
+      <div class="article-img article-img-green">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:70px;opacity:0.6">
+          <circle cx="40" cy="30" r="18" fill="white" opacity="0.4"/>
+          <path d="M22 50 Q40 38 58 50 Q40 70 22 50Z" fill="white" opacity="0.3"/>
+          <circle cx="40" cy="30" r="8" fill="white" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="article-meta">
+        <span class="article-cat">Immune Health</span>
+        <span class="article-time">5 min read</span>
+      </div>
+      <div class="article-title">7 Daily Habits That Silently Weaken Your Immune System</div>
+      <div class="article-excerpt">From poor sleep to chronic stress — discover the everyday patterns that could be undermining your body's natural defences and what you can do today.</div>
+      <div class="article-cta">Read Article </div>
+    </div>
+    
+    <div class="article-card">
+      <div class="article-img article-img-blue">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:70px;opacity:0.6">
+          <path d="M40 15 L55 35 L40 65 L25 35Z" fill="white" opacity="0.4"/>
+          <circle cx="40" cy="40" r="12" fill="none" stroke="white" stroke-width="2" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="article-meta">
+        <span class="article-cat">Heart Health</span>
+        <span class="article-time">6 min read</span>
+      </div>
+      <div class="article-title">Understanding Blood Pressure: What the Numbers Really Mean</div>
+      <div class="article-excerpt">High blood pressure affects millions silently. This guide breaks down what your readings mean, what triggers it, and how lifestyle plays a central role.</div>
+      <div class="article-cta">Read Article </div>
+    </div>
+    
+    <div class="article-card">
+      <div class="article-img article-img-gold">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:70px;opacity:0.6">
+          <rect x="25" y="20" width="30" height="40" rx="8" fill="white" opacity="0.35"/>
+          <circle cx="40" cy="35" r="8" fill="white" opacity="0.4"/>
+          <rect x="32" y="48" width="16" height="4" rx="2" fill="white" opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="article-meta">
+        <span class="article-cat">Nutrition</span>
+        <span class="article-time">4 min read</span>
+      </div>
+      <div class="article-title">The Gut-Health Connection: Why Your Digestion Shapes Everything</div>
+      <div class="article-excerpt">Emerging research reveals how gut health influences mood, immunity, energy, and even weight. Here's what a healthy microbiome really looks like.</div>
+      <div class="article-cta">Read Article </div>
+    </div>
+    
+    <div class="article-card">
+      <div class="article-img" style="background:linear-gradient(135deg,#E2D0E8,#C4A8D4)">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:70px;opacity:0.6">
+          <path d="M40 20 C30 20 22 28 22 38 C22 52 40 62 40 62 C40 62 58 52 58 38 C58 28 50 20 40 20Z" fill="white" opacity="0.35"/>
+        </svg>
+      </div>
+      <div class="article-meta">
+        <span class="article-cat">Women's Health</span>
+        <span class="article-time">5 min read</span>
+      </div>
+      <div class="article-title">Hormonal Balance After 35: What Every Woman Should Know</div>
+      <div class="article-excerpt">Hormonal shifts in mid-life are natural, but they don't have to disrupt your life. Lifestyle strategies that support balance and wellbeing.</div>
+      <div class="article-cta">Read Article </div>
+    </div>
+    
+    <div class="article-card">
+      <div class="article-img" style="background:linear-gradient(135deg,#D0E8D8,#A8CDB4)">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:70px;opacity:0.6">
+          <circle cx="32" cy="35" r="12" fill="white" opacity="0.35"/>
+          <circle cx="52" cy="35" r="8" fill="white" opacity="0.3"/>
+          <path d="M20 55 Q40 45 60 55" stroke="white" stroke-width="2" fill="none" opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="article-meta">
+        <span class="article-cat">Men's Health</span>
+        <span class="article-time">5 min read</span>
+      </div>
+      <div class="article-title">Prostate Health: Prevention Strategies Men Often Overlook</div>
+      <div class="article-excerpt">A proactive approach to prostate wellness through diet, exercise, and key nutritional factors. What the research says and how to start today.</div>
+      <div class="article-cta">Read Article </div>
+    </div>
+    
+    <div class="article-card">
+      <div class="article-img" style="background:linear-gradient(135deg,#E8DEC8,#D4C49C)">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:70px;opacity:0.6">
+          <path d="M20 40 L30 20 L40 45 L50 30 L60 40 L60 60 L20 60Z" fill="white" opacity="0.35"/>
+          <circle cx="40" cy="32" r="6" fill="white" opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="article-meta">
+        <span class="article-cat">Healthy Ageing</span>
+        <span class="article-time">6 min read</span>
+      </div>
+      <div class="article-title">Ageing Gracefully: Nutritional Pillars for Vitality After 50</div>
+      <div class="article-excerpt">Healthy ageing isn't about reversing the clock — it's about supporting your body's changing needs with the right nutrients, movement, and mindset.</div>
+      <div class="article-cta">Read Article </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section style="padding-top:2rem;padding-bottom:2rem">
+  <div class="philosophy-wrap">
+    <div class="philo-label">Our Wellness Philosophy</div>
+    <h2 class="philo-title">"Prevention is not just better than cure — it is the foundation of lasting health."</h2>
+    <div class="philo-grid">
+      <div class="philo-item">
+        <div class="philo-num">01</div>
+        <div class="philo-h">Start with Education</div>
+        <div class="philo-p">Understanding how your body works is the first step to meaningful, lasting change. Knowledge empowers better decisions every day.</div>
+      </div>
+      <div class="philo-item">
+        <div class="philo-num">02</div>
+        <div class="philo-h">Nourish with Intention</div>
+        <div class="philo-p">What you consistently eat, drink, and think shapes your health. Small, daily nutritional choices accumulate into powerful long-term outcomes.</div>
+      </div>
+      <div class="philo-item">
+        <div class="philo-num">03</div>
+        <div class="philo-h">Build Lasting Habits</div>
+        <div class="philo-p">Wellness is not a destination — it is a daily practice. Sustainable habits, built gradually and consistently, create real transformation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products">
+  <div class="section-label">Wellness Support</div>
+  <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap">
+    <div>
+      <h2 class="section-title" style="margin-bottom:0.5rem">Selected Wellness Support</h2>
+      <p class="section-sub">Carefully selected nutritional supplements to complement a balanced lifestyle — recommended within an educational context, never as medical treatment.</p>
+    </div>
+    <button class="btn-outline" style="flex-shrink:0">View All Products</button>
+  </div>
+  <div class="products-grid">
+    
+    <div class="product-card">
+      <div class="product-icon">🌿</div>
+      <div class="product-tag">Immune Support</div>
+      <div class="product-name">Aloe Vera Gel</div>
+      <div class="product-desc">One of Forever Living's flagship products. Stabilised inner leaf aloe vera — a natural source of polysaccharides that supports digestive wellness and immune function.</div>
+      <div class="product-ingredients">
+        <span class="ingredient-tag">Stabilised Aloe</span>
+        <span class="ingredient-tag">Polysaccharides</span>
+        <span class="ingredient-tag">Vitamins C & E</span>
+      </div>
+      <a href="https://thealoeveraco.shop/FScoOcTb" target="_blank" class="product-btn" style="text-decoration:none">Explore Product →</a>
+      <div class="product-disclaimer">*Nutritional supplement. Not intended to diagnose, treat, or cure any disease. Consult your healthcare provider.</div>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-icon">❤️</div>
+      <div class="product-tag">Heart & Circulation</div>
+      <div class="product-name">Arctic Sea Omega-3</div>
+      <div class="product-desc">A balanced blend of omega-3 and omega-9 fatty acids from salmon and olive oil. Supports healthy cholesterol levels and cardiovascular function as part of a balanced diet.</div>
+      <div class="product-ingredients">
+        <span class="ingredient-tag">EPA & DHA</span>
+        <span class="ingredient-tag">Olive Oil</span>
+        <span class="ingredient-tag">Omega-9</span>
+      </div>
+      <a href="https://thealoeveraco.shop/cW05Ymko" target="_blank" class="product-btn" style="text-decoration:none">Explore Product →</a>
+      <div class="product-disclaimer">*Nutritional supplement. Not intended to diagnose, treat, or cure any disease. Consult your healthcare provider.</div>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-icon">⚡</div>
+      <div class="product-tag">Energy & Vitality</div>
+      <div class="product-name">Forever B12 Plus</div>
+      <div class="product-desc">Supports energy metabolism and nervous system function. B12 is essential for red blood cell formation and combating fatigue, particularly for those on plant-based diets.</div>
+      <div class="product-ingredients">
+        <span class="ingredient-tag">Vitamin B12</span>
+        <span class="ingredient-tag">Folic Acid</span>
+        <span class="ingredient-tag">Iron</span>
+      </div>
+      <a href="https://thealoeveraco.shop/W9NN3ZVD" target="_blank" class="product-btn" style="text-decoration:none">Explore Product →</a>
+      <div class="product-disclaimer">*Nutritional supplement. Not intended to diagnose, treat, or cure any disease. Consult your healthcare provider.</div>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-icon">🫁</div>
+      <div class="product-tag">Daily Nutrition</div>
+      <div class="product-name">Forever Daily</div>
+      <div class="product-desc">A comprehensive multivitamin and mineral blend designed to fill nutritional gaps. Formulated with aloe vera for enhanced absorption and everyday nutritional support.</div>
+      <div class="product-ingredients">
+        <span class="ingredient-tag">21 Vitamins</span>
+        <span class="ingredient-tag">Minerals</span>
+        <span class="ingredient-tag">Aloe Matrix</span>
+      </div>
+      <a href="https://thealoeveraco.shop/wyN8blWI" target="_blank" class="product-btn" style="text-decoration:none">Explore Product →</a>
+      <div class="product-disclaimer">*Nutritional supplement. Not intended to diagnose, treat, or cure any disease. Consult your healthcare provider.</div>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-icon">🌸</div>
+      <div class="product-tag">Women's Wellness</div>
+      <div class="product-name">Forever Women's Vitolize</div>
+      <div class="product-desc">A thoughtful blend of herbs, vitamins and minerals designed to support urinary tract health, hormonal balance, and antioxidant protection in women.</div>
+      <div class="product-ingredients">
+        <span class="ingredient-tag">Cranberry</span>
+        <span class="ingredient-tag">Pumpkin Seed</span>
+        <span class="ingredient-tag">Soy Isoflavones</span>
+      </div>
+      <a href="https://thealoeveraco.shop/NZZ3PC09" target="_blank" class="product-btn" style="text-decoration:none">Explore Product →</a>
+      <div class="product-disclaimer">*Nutritional supplement. Not intended to diagnose, treat, or cure any disease. Consult your healthcare provider.</div>
+    </div>
+    
+    <div class="product-card">
+      <div class="product-icon">🌱</div>
+      <div class="product-tag">Digestive Wellness</div>
+      <div class="product-name">Forever Fiber</div>
+      <div class="product-desc">A convenient blend of four soluble fibres to support healthy digestion, comfortable elimination, and the maintenance of a balanced gut microbiome.</div>
+      <div class="product-ingredients">
+        <span class="ingredient-tag">Inulin</span>
+        <span class="ingredient-tag">Psyllium Husk</span>
+        <span class="ingredient-tag">Oat Bran</span>
+      </div>
+      <a href="https://thealoeveraco.shop/osMs0YkM" target="_blank" class="product-btn" style="text-decoration:none">Explore Product →</a>
+      <div class="product-disclaimer">*Nutritional supplement. Not intended to diagnose, treat, or cure any disease. Consult your healthcare provider.</div>
+    </div>
+    
+  </div>
+  <div class="disclaimer-bar">
+    <strong>Important Notice:</strong> The products featured on this website are nutritional supplements intended to support general wellness as part of a healthy lifestyle. They are not intended to diagnose, treat, cure, or prevent any disease or medical condition. Always consult a qualified healthcare professional before starting any new supplement, particularly if you are pregnant, nursing, or managing a medical condition.
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="section-label">Community Voices</div>
+  <h2 class="section-title">What Our Wellness Community Says</h2>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"The weekly articles have genuinely changed how I think about my health. I feel more informed and less anxious about managing my blood pressure."</div>
+      <div class="testi-author">
+        <div class="testi-avatar">AO</div>
+        <div>
+          <div class="testi-name">Adaeze O.</div>
+          <div class="testi-loc">Lagos, Nigeria</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"Finally a wellness page that doesn't just try to sell you something. The articles are educational, practical, and actually useful for daily life."</div>
+      <div class="testi-author">
+        <div class="testi-avatar">KM</div>
+        <div>
+          <div class="testi-name">Kwame M.</div>
+          <div class="testi-loc">Accra, Ghana</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-quote">"I joined the WhatsApp community and the personalised guidance has been incredible. My energy levels have genuinely improved over the past three months."</div>
+      <div class="testi-author">
+        <div class="testi-avatar">FI</div>
+        <div>
+          <div class="testi-name">Fatima I.</div>
+          <div class="testi-loc">Abuja, Nigeria</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT STRIP -->
+<section id="about" style="padding-top:2rem">
+  <div class="about-strip">
+    <div class="about-img-area" style="padding:0;overflow:hidden">
+      <img src="NaturesCornerProfilePics5.png" alt="Nature's Corner" style="width:100%;height:100%;object-fit:cover;border-radius:24px 24px 80px 24px;">
+      <div class="about-floating top-right">
+        <strong>3× Weekly</strong>
+        <span>Published every week</span>
+      </div>
+      <div class="about-floating bottom-left">
+        <strong>Forever Living</strong>
+        <span>Certified Business Owner</span>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="section-label">About This Platform</div>
+      <h2 class="section-title">Rooted in Genuine Care for Your Health</h2>
+      <p>This platform was built out of a deep belief that most people lack access to clear, honest, and practical health guidance. Not medical jargon — real-world wellness education that helps you make better choices every single day.</p>
+      <p>As a Forever Living Products Business Owner and passionate wellness advocate, I'm committed to educating our community about preventive health, nutrition, and the lifestyle habits that genuinely move the needle on long-term wellbeing.</p>
+      <p>Every article, every product recommendation, and every piece of guidance shared here is rooted in one mission: to help you live healthier, longer, and with greater vitality.</p>
+      <div class="about-values">
+        <div class="about-value">Education before selling</div>
+        <div class="about-value">Prevention-focused approach</div>
+        <div class="about-value">Compliant wellness claims only</div>
+        <div class="about-value">Community-first mindset</div>
+        <div class="about-value">Evidence-aware guidance</div>
+        <div class="about-value">Long-term trust building</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section style="padding-top:0">
+  <div class="newsletter-wrap">
+    <div class="section-label" style="text-align:center">Free Weekly Newsletter</div>
+    <h2 class="section-title">Get Wellness Insights Delivered to You</h2>
+    <p class="nl-sub">Join 1,200+ readers who receive our weekly health awareness digest — practical, educational, and always free.</p>
+    <script src="https://js-eu1.hsforms.net/forms/embed/148395267.js" defer></script>
+    <div class="hs-form-frame" data-region="eu1" data-form-id="44ea7b16-a557-4c13-8de8-b52b8735390e" data-portal-id="148395267"></div>
+    <div class="nl-note">No spam. Unsubscribe anytime. We respect your privacy.</div>
+  </div>
+</section>
+
+<!-- WHATSAPP CTA -->
+<section id="contact" style="padding-top:0;padding-bottom:4rem">
+  <div class="wa-section">
+    <div class="wa-text">
+      <h3>Need personalised wellness guidance?</h3>
+      <p>Ask questions, get recommendations, or just start a conversation about your health goals.</p>
+    </div>
+    <button class="wa-btn" onclick="window.open('https://wa.me/2347038801942','_blank')">
+      <div class="wa-icon">
+        <svg viewBox="0 0 24 24" fill="white" style="width:14px;height:14px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.1 1.524 5.818L.057 23.928 6.29 22.5A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.914 0-3.705-.508-5.254-1.394l-.376-.224-3.896.919.976-3.817-.244-.394A9.965 9.965 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      </div>
+      Chat on WhatsApp
+    </button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo footer-logo" style="font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--sage-light)">Verdant<span style="color:var(--earth-light)">.</span>Wellness</span>
+        <p style="margin-top:1rem">A wellness education platform dedicated to helping people build healthier lives through knowledge, nutrition, and preventive lifestyle habits.</p>
+        <div style="margin-top:1.5rem">
+          <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.3);margin-bottom:0.5rem">Forever Living Business Owner</div>
+          <div style="font-size:0.85rem;color:rgba(255,255,255,0.5)">Certified & Registered Member</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Articles</h4>
+        <ul class="footer-links">
+          <li><a>Immune Health</a></li>
+          <li><a>Heart Health</a></li>
+          <li><a>Digestive Wellness</a></li>
+          <li><a>Women's Health</a></li>
+          <li><a>Men's Health</a></li>
+          <li><a>Healthy Ageing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul class="footer-links">
+          <li><a>Home</a></li>
+          <li><a>About Us</a></li>
+          <li><a>Wellness Support</a></li>
+          <li><a>Newsletter</a></li>
+          <li><a>WhatsApp Community</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a>Disclaimer</a></li>
+          <li><a>Privacy Policy</a></li>
+          <li><a>Terms of Use</a></li>
+        </ul>
+        <div style="margin-top:1.5rem">
+          <h4>Connect</h4>
+          <div class="footer-socials" style="margin-top:0.75rem">
+            <div class="social-btn">ig</div>
+            <div class="social-btn">fb</div>
+            <div class="social-btn">tw</div>
+            <div class="social-btn">yt</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="font-size:0.72rem;line-height:1.7;color:rgba(255,255,255,0.25);margin-bottom:1.5rem;padding:1rem;background:rgba(255,255,255,0.04);border-radius:8px">
+      <strong style="color:rgba(255,255,255,0.35)">Disclaimer:</strong> The information on this website is for educational purposes only and is not intended as medical advice. Products mentioned are nutritional supplements designed to support overall wellness and should not replace professional medical care. Results may vary. Always consult a qualified healthcare professional regarding any medical concerns or before beginning any supplement programme.
+    </div>
+    <div class="footer-bottom">
+      <div>© 2025 Verdant Wellness. All rights reserved.</div>
+      <div style="color:rgba(255,255,255,0.25)">Wellness Education · Nutrition Guidance · Preventive Health</div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WA -->
+<div class="float-wa" onclick="window.open('https://wa.me/234XXXXXXXXXX','_blank')" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.1 1.524 5.818L.057 23.928 6.29 22.5A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.914 0-3.705-.508-5.254-1.394l-.376-.224-3.896.919.976-3.817-.244-.394A9.965 9.965 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</div>
+
+</body>
+</html>
