@@ -516,7 +516,7 @@
         <span class="ingredient-tag">Polysaccharides</span>
         <span class="ingredient-tag">Vitamins C & E</span>
       </div>
-      <a href="https://thealoeveraco.shop/FScoOcTb" target="_blank" class="product-btn" style="text-decoration:none">Explore Product →</a>
+      <button onclick="redirectToProduct('aloe-vera-gel')" class="product-btn">Explore Product →</button>
       <div class="product-disclaimer">*Nutritional supplement. Not intended to diagnose, treat, or cure any disease. Consult your healthcare provider.</div>
     </div>
     
@@ -530,7 +530,7 @@
         <span class="ingredient-tag">Olive Oil</span>
         <span class="ingredient-tag">Omega-9</span>
       </div>
-      <a href="https://thealoeveraco.shop/cW05Ymko" target="_blank" class="product-btn" style="text-decoration:none">Explore Product →</a>
+      <button onclick="redirectToProduct('arctic-sea')" class="product-btn">Explore Product →</button>
       <div class="product-disclaimer">*Nutritional supplement. Not intended to diagnose, treat, or cure any disease. Consult your healthcare provider.</div>
     </div>
     
@@ -544,7 +544,7 @@
         <span class="ingredient-tag">Folic Acid</span>
         <span class="ingredient-tag">Iron</span>
       </div>
-      <a href="https://thealoeveraco.shop/W9NN3ZVD" target="_blank" class="product-btn" style="text-decoration:none">Explore Product →</a>
+      <button onclick="redirectToProduct('b12-plus')" class="product-btn">Explore Product →</button>
       <div class="product-disclaimer">*Nutritional supplement. Not intended to diagnose, treat, or cure any disease. Consult your healthcare provider.</div>
     </div>
     
@@ -558,7 +558,7 @@
         <span class="ingredient-tag">Minerals</span>
         <span class="ingredient-tag">Aloe Matrix</span>
       </div>
-      <a href="https://thealoeveraco.shop/wyN8blWI" target="_blank" class="product-btn" style="text-decoration:none">Explore Product →</a>
+      <button onclick="redirectToProduct('forever-daily')" class="product-btn">Explore Product →</button>
       <div class="product-disclaimer">*Nutritional supplement. Not intended to diagnose, treat, or cure any disease. Consult your healthcare provider.</div>
     </div>
     
@@ -572,7 +572,7 @@
         <span class="ingredient-tag">Pumpkin Seed</span>
         <span class="ingredient-tag">Soy Isoflavones</span>
       </div>
-      <a href="https://thealoeveraco.shop/NZZ3PC09" target="_blank" class="product-btn" style="text-decoration:none">Explore Product →</a>
+      <button onclick="redirectToProduct('womens-vitolize')" class="product-btn">Explore Product →</button>
       <div class="product-disclaimer">*Nutritional supplement. Not intended to diagnose, treat, or cure any disease. Consult your healthcare provider.</div>
     </div>
     
@@ -586,7 +586,7 @@
         <span class="ingredient-tag">Psyllium Husk</span>
         <span class="ingredient-tag">Oat Bran</span>
       </div>
-      <a href="https://thealoeveraco.shop/osMs0YkM" target="_blank" class="product-btn" style="text-decoration:none">Explore Product →</a>
+      <button onclick="redirectToProduct('forever-fiber')" class="product-btn">Explore Product →</button>
       <div class="product-disclaimer">*Nutritional supplement. Not intended to diagnose, treat, or cure any disease. Consult your healthcare provider.</div>
     </div>
     
@@ -892,5 +892,129 @@
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.1 1.524 5.818L.057 23.928 6.29 22.5A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.914 0-3.705-.508-5.254-1.394l-.376-.224-3.896.919.976-3.817-.244-.394A9.965 9.965 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </div>
 
+<!-- ============================================
+     FOREVER LIVING GEO-REDIRECT SYSTEM
+     Automatically detects visitor country and
+     redirects product links to correct FLP
+     country store
+     ============================================ -->
+<script>
+// -----------------------------------------------
+// Forever Living Country Store URL Map
+// Add more countries as needed
+// -----------------------------------------------
+const FLP_COUNTRY_STORES = {
+
+  // Africa
+  NG: 'https://foreverliving.com/nga/en-ng/home',       // Nigeria
+  GH: 'https://foreverliving.com/gha/en-us/home',       // Ghana
+  KE: 'https://foreverliving.com/ken/en-us/home',       // Kenya
+  ZA: 'https://foreverliving.com/zaf/en-us/home',       // South Africa
+  TZ: 'https://foreverliving.com/tza/en-us/home',       // Tanzania
+  UG: 'https://foreverliving.com/uga/en-us/home',       // Uganda
+  RW: 'https://foreverliving.com/rwa/en-us/home',       // Rwanda
+  CM: 'https://foreverliving.com/cmr/en-us/home',       // Cameroon
+  SN: 'https://foreverliving.com/sen/en-us/home',       // Senegal
+  CI: 'https://foreverliving.com/civ/en-us/home',       // Ivory Coast
+
+  // Europe
+  GB: 'https://thealoeveraco.shop',                      // UK (your store)
+  DE: 'https://foreverliving.com/deu/de-de/home',       // Germany
+  FR: 'https://foreverliving.com/fra/fr-fr/home',       // France
+  IT: 'https://foreverliving.com/ita/it-it/home',       // Italy
+  ES: 'https://foreverliving.com/esp/es-es/home',       // Spain
+  NL: 'https://foreverliving.com/nld/nl-nl/home',       // Netherlands
+  BE: 'https://foreverliving.com/bel/fr-be/home',       // Belgium
+  IE: 'https://foreverliving.com/irl/en-ie/home',       // Ireland
+  PT: 'https://foreverliving.com/prt/pt-pt/home',       // Portugal
+  SE: 'https://foreverliving.com/swe/sv-se/home',       // Sweden
+  NO: 'https://foreverliving.com/nor/nb-no/home',       // Norway
+  PL: 'https://foreverliving.com/pol/pl-pl/home',       // Poland
+
+  // Americas
+  US: 'https://foreverliving.com/usa/en-us/home',       // USA
+  CA: 'https://foreverliving.com/can/en-ca/home',       // Canada
+
+  // Asia & Middle East
+  IN: 'https://foreverliving.com/ind/en-in/home',       // India
+  AE: 'https://foreverliving.com/are/en-us/home',       // UAE
+  SA: 'https://foreverliving.com/sau/en-us/home',       // Saudi Arabia
+  MY: 'https://foreverliving.com/mys/en-us/home',       // Malaysia
+  SG: 'https://foreverliving.com/sgp/en-us/home',       // Singapore
+
+  // Default fallback
+  DEFAULT: 'https://thealoeveraco.shop'                  // Your UK store
+
+};
+// -----------------------------------------------
+// Product path map — maps each product to its
+// specific path on the Forever Living store
+// Update these with your actual product paths
+// -----------------------------------------------
+const FLP_PRODUCTS = {
+  'aloe-vera-gel':      '/FScoOcTb',
+  'arctic-sea':         '/cW05Ymko',
+  'b12-plus':           '/W9NN3ZVD',
+  'forever-daily':      '/wyN8blWI',
+  'womens-vitolize':    '/NZZ3PC09',
+  'forever-fiber':      '/osMs0YkM'
+};
+
+// -----------------------------------------------
+// Detect country and return correct store base URL
+// Uses free ipapi.co service — 1000 free
+// requests per day, no API key needed
+// -----------------------------------------------
+async function getVisitorCountry() {
+  try {
+    const response = await fetch('https://ipapi.co/json/');
+    const data = await response.json();
+    return data.country_code || 'DEFAULT';
+  } catch (error) {
+    return 'DEFAULT';
+  }
+}
+
+// -----------------------------------------------
+// Main redirect function
+// Called when visitor clicks any product button
+// -----------------------------------------------
+async function redirectToProduct(productKey) {
+
+  // Show a brief loading message so visitor knows
+  // something is happening
+  const loadingMsg = document.getElementById('geo-loading-msg');
+  if (loadingMsg) loadingMsg.style.display = 'block';
+
+  // Get visitor country
+  const countryCode = await getVisitorCountry();
+
+  // Get the correct store base URL for their country
+  const storeBase = FLP_COUNTRY_STORES[countryCode]
+                 || FLP_COUNTRY_STORES['DEFAULT'];
+
+  // For UK store use the short links you already have
+  if (countryCode === 'GB' || storeBase === FLP_COUNTRY_STORES['DEFAULT']) {
+    const productPath = FLP_PRODUCTS[productKey] || '';
+    window.open('https://thealoeveraco.shop' + productPath, '_blank');
+  } else {
+    // For other countries send to their country homepage
+    // so they can browse in their local currency
+    window.open(storeBase, '_blank');
+  }
+
+  if (loadingMsg) loadingMsg.style.display = 'none';
+}
+</script>
+
+<!-- Brief loading indicator -->
+<div id="geo-loading-msg" style="display:none;position:fixed;bottom:5rem;left:50%;transform:translateX(-50%);background:var(--sage-deep);color:white;padding:0.75rem 1.5rem;border-radius:24px;font-size:0.85rem;z-index:999;box-shadow:0 8px 24px rgba(0,0,0,0.2)">
+  🌍 Finding your local store...
+</div>
+
+<!-- ============================================
+     END FOREVER LIVING GEO-REDIRECT SYSTEM
+     ============================================ -->
+ 
 </body>
 </html>
