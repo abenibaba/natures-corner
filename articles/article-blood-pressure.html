@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding Blood Pressure: What the Numbers Really Mean | Nature's Corner</title>
+<meta name="description" content="High blood pressure affects millions silently. This guide breaks down what your readings mean, what triggers it, and how lifestyle plays a central role in managing it.">
+<meta name="keywords" content="blood pressure, hypertension, heart health, wellness, nutrition, Nature's Corner">
+<meta property="og:title" content="Understanding Blood Pressure: What the Numbers Really Mean">
+<meta property="og:description" content="High blood pressure affects millions silently. Learn what your readings mean and how lifestyle shapes your heart health.">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --sage:#5C7A5F;--sage-light:#8FAB91;--sage-pale:#EEF4EE;--sage-deep:#3A5C3D;
+  --cream:#F9F6F0;--warm-white:#FDFCF9;--earth:#A08060;--earth-light:#D4BC9E;
+  --text-dark:#1A2420;--text-mid:#4A5C50;--text-light:#8A9E8E;
+  --accent:#C4874A;--border:#E4EDE4;
+  --ff-display:'Cormorant Garamond',Georgia,serif;
+  --ff-body:'DM Sans','Segoe UI',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);color:var(--text-dark);background:var(--warm-white);overflow-x:hidden;font-size:17px;line-height:1.8}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,252,249,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 5%}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1200px;margin:0 auto}
+.logo{font-family:var(--ff-display);font-size:1.4rem;font-weight:400;color:var(--sage-deep);letter-spacing:0.02em;text-decoration:none}
+.logo span{color:var(--accent)}
+.nav-back{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.85rem;color:var(--text-mid);text-decoration:none;transition:color 0.2s}
+.nav-back:hover{color:var(--sage-deep)}
+.nav-back::before{content:'←'}
+.nav-cta{background:var(--sage);color:white;border:none;padding:0.5rem 1.2rem;border-radius:24px;font-family:var(--ff-body);font-size:0.8rem;font-weight:500;cursor:pointer;letter-spacing:0.04em;transition:background 0.2s;text-decoration:none}
+.nav-cta:hover{background:var(--sage-deep)}
+.article-hero{max-width:800px;margin:0 auto;padding:8rem 5% 3rem}
+.article-category-row{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.article-cat-badge{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:white;background:#6B8FAB;padding:0.35rem 0.9rem;border-radius:20px;font-weight:500}
+.article-read-time{font-size:0.8rem;color:var(--text-light)}
+.article-date{font-size:0.8rem;color:var(--text-light)}
+h1.article-title{font-family:var(--ff-display);font-size:3.2rem;font-weight:300;line-height:1.15;color:var(--text-dark);margin-bottom:1.25rem}
+.article-subtitle{font-size:1.1rem;line-height:1.75;color:var(--text-mid);margin-bottom:2rem;font-weight:300}
+.article-author-row{display:flex;align-items:center;gap:1rem;padding:1.25rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:2.5rem}
+.author-avatar{width:44px;height:44px;border-radius:50%;background:var(--sage-pale);display:flex;align-items:center;justify-content:center;font-family:var(--ff-display);font-size:1rem;font-weight:400;color:var(--sage-deep);flex-shrink:0}
+.author-name{font-size:0.9rem;font-weight:500;color:var(--text-dark)}
+.author-title{font-size:0.78rem;color:var(--text-light)}
+.share-row{display:flex;align-items:center;gap:0.6rem;margin-left:auto}
+.share-label{font-size:0.75rem;color:var(--text-light);letter-spacing:0.05em;text-transform:uppercase}
+.share-btn{width:34px;height:34px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--text-mid);cursor:pointer;transition:all 0.2s;background:white;text-decoration:none}
+.share-btn:hover{border-color:var(--sage);color:var(--sage-deep)}
+.article-hero-img{max-width:800px;margin:0 auto 0;padding:0 5%}
+.hero-img-area{background:linear-gradient(160deg,#C2D4DE 0%,#8AABBE 50%,#A0BECE 100%);border-radius:24px;height:420px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero-big-num{font-family:var(--ff-display);font-size:8rem;font-weight:300;color:white;opacity:0.1;line-height:1;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.hero-img-content{text-align:center;position:relative;z-index:1}
+.hero-img-icon{font-size:4rem;margin-bottom:1rem;display:block}
+.hero-img-label{font-family:var(--ff-display);font-size:1.8rem;font-weight:300;color:white;font-style:italic}
+.article-body{max-width:720px;margin:0 auto;padding:3rem 5% 5rem}
+.key-takeaway{background:#EAF2F7;border-left:4px solid #6B8FAB;border-radius:0 16px 16px 0;padding:1.5rem 1.75rem;margin:2.5rem 0}
+.key-takeaway-label{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:#6B8FAB;font-weight:500;margin-bottom:0.5rem}
+.key-takeaway p{font-size:0.95rem;line-height:1.75;color:var(--text-mid);font-style:italic}
+.bp-table{width:100%;border-collapse:collapse;margin:2rem 0;border-radius:16px;overflow:hidden;border:1px solid var(--border)}
+.bp-table th{background:var(--sage-deep);color:white;padding:0.85rem 1rem;font-size:0.85rem;font-weight:500;text-align:left;letter-spacing:0.03em}
+.bp-table td{padding:0.85rem 1rem;font-size:0.875rem;color:var(--text-mid);border-bottom:1px solid var(--border)}
+.bp-table tr:last-child td{border-bottom:none}
+.bp-table tr:nth-child(even) td{background:var(--cream)}
+.bp-normal{color:#3A7D3A;font-weight:500}
+.bp-elevated{color:#C4874A;font-weight:500}
+.bp-high{color:#C44A4A;font-weight:500}
+.section-card{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin:2rem 0;transition:box-shadow 0.2s}
+.section-card:hover{box-shadow:0 8px 32px rgba(92,122,95,0.1)}
+.section-card-icon{font-size:1.75rem;margin-bottom:0.75rem;display:block}
+.section-card-title{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--text-dark);margin-bottom:0.75rem}
+.section-card-body{font-size:0.95rem;line-height:1.8;color:var(--text-mid)}
+.habit-tip{display:flex;align-items:flex-start;gap:0.6rem;background:var(--cream);border-radius:10px;padding:0.85rem 1rem;margin-top:1.1rem;font-size:0.875rem;color:var(--text-mid);line-height:1.65}
+.habit-tip::before{content:'💡';flex-shrink:0}
+.pull-quote{border-top:2px solid #8AABBE;border-bottom:2px solid #8AABBE;padding:2rem 0;margin:3rem 0;text-align:center}
+.pull-quote blockquote{font-family:var(--ff-display);font-size:1.8rem;font-weight:300;font-style:italic;color:#3A5C7A;line-height:1.4}
+.pull-quote cite{display:block;font-size:0.8rem;color:var(--text-light);margin-top:0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-style:normal}
+.article-body h2{font-family:var(--ff-display);font-size:2rem;font-weight:400;color:var(--text-dark);margin:3rem 0 1rem;line-height:1.25}
+.article-body p{font-size:1rem;line-height:1.85;color:var(--text-mid);margin-bottom:1.25rem}
+.article-body strong{color:var(--text-dark);font-weight:500}
+.article-body ul{margin:1rem 0 1.5rem 1.5rem}
+.article-body ul li{font-size:0.95rem;line-height:1.8;color:var(--text-mid);margin-bottom:0.4rem}
+.summary-box{background:var(--sage-deep);border-radius:20px;padding:2.5rem;margin:3rem 0;color:white}
+.summary-box h3{font-family:var(--ff-display);font-size:1.6rem;font-weight:300;color:#FFFFFF;margin-bottom:1.25rem;font-style:italic}
+.summary-list{list-style:none;margin:0}
+.summary-list li{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.95rem;line-height:1.75;color:#FFFFFF;margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(255,255,255,0.1)}
+.summary-list li:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.summary-list li::before{content:none}
+.article-disclaimer{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;font-size:0.78rem;line-height:1.7;color:var(--text-light);margin:2rem 0}
+.article-disclaimer strong{color:var(--text-mid)}
+.product-rec{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin:3rem 0;display:flex;gap:1.5rem;align-items:flex-start;flex-wrap:wrap}
+.product-rec-icon{width:64px;height:64px;background:var(--sage-pale);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.75rem;flex-shrink:0}
+.product-rec-content{flex:1;min-width:220px}
+.product-rec-label{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:0.4rem}
+.product-rec-name{font-family:var(--ff-display);font-size:1.3rem;font-weight:400;color:var(--text-dark);margin-bottom:0.5rem}
+.product-rec-desc{font-size:0.875rem;line-height:1.7;color:var(--text-mid);margin-bottom:1rem}
+.product-rec-btn{display:inline-flex;align-items:center;gap:0.4rem;background:var(--sage);color:white;border:none;padding:0.65rem 1.3rem;border-radius:24px;font-family:var(--ff-body);font-size:0.8rem;font-weight:500;cursor:pointer;transition:background 0.2s;text-decoration:none}
+.product-rec-btn:hover{background:var(--sage-deep)}
+.product-rec-disclaimer{font-size:0.68rem;color:var(--text-light);margin-top:0.6rem;line-height:1.5}
+.faq-section{margin:3rem 0}
+.faq-item{border-bottom:1px solid var(--border);padding:1.25rem 0}
+.faq-q{font-weight:500;color:var(--text-dark);margin-bottom:0.6rem;font-size:0.95rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q::after{content:'+';font-size:1.2rem;color:var(--sage);transition:transform 0.2s;flex-shrink:0}
+.faq-q.open::after{transform:rotate(45deg)}
+.faq-a{font-size:0.9rem;line-height:1.8;color:var(--text-mid);display:none;padding-top:0.25rem}
+.faq-a.show{display:block}
+.author-bio{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin:3rem 0;display:flex;gap:1.5rem;align-items:flex-start;flex-wrap:wrap}
+.author-bio-avatar{width:70px;height:70px;border-radius:50%;overflow:hidden;flex-shrink:0;background:var(--sage-pale);display:flex;align-items:center;justify-content:center}
+.author-bio-avatar img{width:100%;height:100%;object-fit:cover}
+.author-bio-content{flex:1;min-width:200px}
+.author-bio-label{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:0.3rem}
+.author-bio-name{font-family:var(--ff-display);font-size:1.3rem;font-weight:400;color:var(--text-dark);margin-bottom:0.5rem}
+.author-bio-text{font-size:0.875rem;line-height:1.75;color:var(--text-mid)}
+.related-section{background:var(--cream);padding:4rem 5%}
+.related-inner{max-width:800px;margin:0 auto}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem}
+.related-card{background:white;border-radius:16px;overflow:hidden;border:1px solid var(--border);cursor:pointer;transition:all 0.2s;text-decoration:none;display:block}
+.related-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(92,122,95,0.1)}
+.related-img{height:120px;display:flex;align-items:center;justify-content:center;font-size:2rem}
+.related-content{padding:1rem}
+.related-cat{font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:0.4rem}
+.related-title{font-family:var(--ff-display);font-size:1.05rem;font-weight:400;color:var(--text-dark);line-height:1.3}
+footer{background:var(--text-dark);color:rgba(255,255,255,0.5);padding:2.5rem 5%;text-align:center}
+.footer-logo{font-family:var(--ff-display);font-size:1.3rem;font-weight:400;color:var(--sage-light);margin-bottom:0.5rem}
+.footer-note{font-size:0.78rem;line-height:1.7;color:rgba(255,255,255,0.3);max-width:600px;margin:0.75rem auto 0}
+.float-wa{position:fixed;bottom:2rem;right:2rem;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,0.4);cursor:pointer;z-index:200;transition:all 0.2s}
+.float-wa:hover{transform:scale(1.1)}
+.float-wa svg{fill:white;width:24px;height:24px}
+.reading-progress{position:fixed;top:64px;left:0;right:0;height:3px;background:var(--border);z-index:99}
+.reading-progress-bar{height:100%;background:linear-gradient(90deg,#6B8FAB,var(--accent));width:0%;transition:width 0.1s linear}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.article-hero{animation:fadeUp 0.7s ease both}
+.article-hero-img{animation:fadeUp 0.7s ease 0.15s both}
+.article-body{animation:fadeUp 0.7s ease 0.25s both}
+@media(max-width:680px){h1.article-title{font-size:2.2rem}.hero-img-area{height:260px}.related-grid{grid-template-columns:1fr 1fr}.share-row{display:none}.pull-quote blockquote{font-size:1.4rem}}
+@media(max-width:400px){.related-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="reading-progress"><div class="reading-progress-bar" id="progressBar"></div></div>
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="logo">Nature's<span> </span>Corner</a>
+    <a href="../index.html" class="nav-back">Back to Home</a>
+    <a href="../index.html#newsletter-section" class="nav-cta">Join Community</a>
+  </div>
+</nav>
+<div class="article-hero">
+  <div class="article-category-row">
+    <span class="article-cat-badge">Heart Health</span>
+    <span class="article-read-time">⏱ 6 min read</span>
+    <span class="article-date">Published by Nature's Corner</span>
+  </div>
+  <h1 class="article-title">Understanding Blood Pressure: What the Numbers Really Mean</h1>
+  <p class="article-subtitle">High blood pressure affects millions of people silently. This guide breaks down what your readings mean, what drives them up, and how your daily lifestyle is one of the most powerful tools you have.</p>
+  <div class="article-author-row">
+    <div class="author-avatar">NC</div>
+    <div><div class="author-name">Nature's Corner</div><div class="author-title">Wellness Education & Nutrition Guidance</div></div>
+    <div class="share-row">
+      <span class="share-label">Share</span>
+      <a class="share-btn" onclick="shareArticle('whatsapp')" title="WhatsApp">wa</a>
+      <a class="share-btn" onclick="shareArticle('facebook')" title="Facebook">fb</a>
+      <a class="share-btn" onclick="shareArticle('twitter')" title="Twitter">tw</a>
+    </div>
+  </div>
+</div>
+<div class="article-hero-img">
+  <div class="hero-img-area">
+    <div class="hero-big-num">❤</div>
+    <div class="hero-img-content">
+      <span class="hero-img-icon">❤️</span>
+      <div class="hero-img-label">Know Your Numbers</div>
+    </div>
+  </div>
+</div>
+<div class="article-body">
+  <div class="key-takeaway">
+    <div class="key-takeaway-label">Key Takeaway</div>
+    <p>High blood pressure is called the "silent killer" because it rarely causes symptoms until serious damage has already occurred. Understanding your numbers — and the lifestyle factors behind them — is one of the most important steps you can take for your long-term health.</p>
+  </div>
+  <p>Blood pressure is one of those health metrics that most people have measured but few truly understand. You sit in a clinic, a cuff is placed around your arm, two numbers are read out, and you either hear "that's fine" or "that's a bit high" — often without a clear explanation of what those numbers actually represent.</p>
+  <p>This article changes that. By the end, you will understand exactly what blood pressure is, what your readings mean, what causes it to rise, and — most importantly — what you can do every day to support a healthy cardiovascular system.</p>
+  <h2>What Is Blood Pressure?</h2>
+  <p>Blood pressure is the force that your blood exerts against the walls of your arteries as your heart pumps it around your body. It is recorded as two numbers — for example, 120/80 mmHg — and both numbers matter.</p>
+  <p><strong>The top number (systolic)</strong> measures the pressure in your arteries when your heart beats and pumps blood out.</p>
+  <p><strong>The bottom number (diastolic)</strong> measures the pressure in your arteries between beats, when your heart is resting and refilling.</p>
+  <h2>What Do the Numbers Mean?</h2>
+  <table class="bp-table">
+    <thead><tr><th>Category</th><th>Systolic (mmHg)</th><th>Diastolic (mmHg)</th><th>What It Means</th></tr></thead>
+    <tbody>
+      <tr><td><span class="bp-normal">Normal</span></td><td>Less than 120</td><td>Less than 80</td><td>Ideal. Maintain your healthy habits.</td></tr>
+      <tr><td><span class="bp-elevated">Elevated</span></td><td>120 – 129</td><td>Less than 80</td><td>Worth monitoring. Lifestyle focus needed.</td></tr>
+      <tr><td><span class="bp-high">High Stage 1</span></td><td>130 – 139</td><td>80 – 89</td><td>Discuss with a healthcare professional.</td></tr>
+      <tr><td><span class="bp-high">High Stage 2</span></td><td>140 or higher</td><td>90 or higher</td><td>Medical attention recommended.</td></tr>
+      <tr><td><span class="bp-high">Crisis</span></td><td>Higher than 180</td><td>Higher than 120</td><td>Seek emergency care immediately.</td></tr>
+    </tbody>
+  </table>
+  <p>It is also worth noting that <strong>low blood pressure (hypotension)</strong> — typically below 90/60 — can cause dizziness, fainting, and fatigue, and also warrants professional attention.</p>
+  <div class="pull-quote">
+    <blockquote>"High blood pressure rarely announces itself. Most people feel completely fine — right up until they don't."</blockquote>
+    <cite>Nature's Corner Wellness Education</cite>
+  </div>
+  <h2>Why Does Blood Pressure Rise?</h2>
+  <p>In the majority of cases — roughly 90 to 95 percent — high blood pressure has no single identifiable medical cause. This is called <strong>primary or essential hypertension</strong>, and it develops gradually over years as a result of lifestyle factors.</p>
+
+  <div class="section-card">
+    <span class="section-card-icon">🧂</span>
+    <div class="section-card-title">Excess Dietary Sodium</div>
+    <p class="section-card-body">Salt causes the body to retain water, increasing the volume of blood in circulation and therefore the pressure on artery walls. Most people consume far more sodium than they realise — not from the salt shaker but from processed foods, tinned goods, bread, and restaurant meals.</p>
+    <div class="habit-tip">Aim to consume less than 2,300mg of sodium daily. Read food labels and cook from scratch where possible using herbs and spices rather than salt for flavour.</div>
+  </div>
+
+  <div class="section-card">
+    <span class="section-card-icon">⚖️</span>
+    <div class="section-card-title">Excess Body Weight</div>
+    <p class="section-card-body">Carrying extra weight — particularly around the abdomen — forces the heart to work harder to pump blood throughout a larger body. This sustained extra effort raises blood pressure over time. Even a modest reduction in weight can lead to meaningful improvements in blood pressure readings.</p>
+    <div class="habit-tip">A sustained reduction of even 5 to 10 percent of body weight can lower systolic blood pressure by 5 to 10 mmHg in overweight individuals.</div>
+  </div>
+
+  <div class="section-card">
+    <span class="section-card-icon">🏃</span>
+    <div class="section-card-title">Physical Inactivity</div>
+    <p class="section-card-body">Regular exercise strengthens the heart muscle, allowing it to pump blood with less effort. An inactive heart must work harder to push blood through the body, which over time contributes to elevated pressure. Regular moderate exercise is one of the most effective non-pharmacological interventions for blood pressure.</p>
+    <div class="habit-tip">30 minutes of moderate activity — brisk walking, cycling, swimming — five days a week can lower systolic blood pressure by 4 to 9 mmHg.</div>
+  </div>
+
+  <div class="section-card">
+    <span class="section-card-icon">😰</span>
+    <div class="section-card-title">Chronic Stress</div>
+    <p class="section-card-body">When you are stressed, your body releases adrenaline and cortisol, which temporarily raise blood pressure by causing the heart to beat faster and blood vessels to narrow. In chronic stress, this response is triggered repeatedly — keeping blood pressure persistently elevated and increasing cardiovascular risk over time.</p>
+    <div class="habit-tip">Incorporate daily stress-reduction practices — breathing exercises, light movement, prayer, time in nature. Consistent practice matters more than duration.</div>
+  </div>
+
+  <div class="section-card">
+    <span class="section-card-icon">🥃</span>
+    <div class="section-card-title">Excessive Alcohol and Smoking</div>
+    <p class="section-card-body">Alcohol raises blood pressure both acutely and chronically when consumed in excess. Smoking causes an immediate spike in blood pressure and damages artery walls over time, accelerating the narrowing and hardening of vessels that drives long-term hypertension.</p>
+    <div class="habit-tip">Reducing alcohol and quitting smoking are among the highest-impact changes a person can make for blood pressure and overall cardiovascular health.</div>
+  </div>
+
+  <h2>Lifestyle Changes That Make a Real Difference</h2>
+  <p>The encouraging reality about blood pressure is that lifestyle changes are genuinely powerful. For many people with elevated or Stage 1 hypertension, consistent lifestyle improvements alone can bring readings into a healthy range — without medication.</p>
+  <div class="summary-box">
+    <h3>Your Blood Pressure Action Plan</h3>
+    <ul class="summary-list" style="list-style:none;margin:0">
+      <li style="color:#FFFFFF;font-size:0.95rem;line-height:1.75;display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(255,255,255,0.2)"><span style="color:#7DDA7D;font-weight:700;flex-shrink:0">✓</span>Reduce sodium intake — aim for less than 2,300mg per day</li>
+      <li style="color:#FFFFFF;font-size:0.95rem;line-height:1.75;display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(255,255,255,0.2)"><span style="color:#7DDA7D;font-weight:700;flex-shrink:0">✓</span>Exercise moderately for 30 minutes, five days a week</li>
+      <li style="color:#FFFFFF;font-size:0.95rem;line-height:1.75;display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(255,255,255,0.2)"><span style="color:#7DDA7D;font-weight:700;flex-shrink:0">✓</span>Maintain a healthy body weight or work toward gradual reduction</li>
+      <li style="color:#FFFFFF;font-size:0.95rem;line-height:1.75;display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(255,255,255,0.2)"><span style="color:#7DDA7D;font-weight:700;flex-shrink:0">✓</span>Eat a diet rich in potassium — bananas, leafy greens, sweet potatoes</li>
+      <li style="color:#FFFFFF;font-size:0.95rem;line-height:1.75;display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(255,255,255,0.2)"><span style="color:#7DDA7D;font-weight:700;flex-shrink:0">✓</span>Manage stress daily through intentional relaxation practices</li>
+      <li style="color:#FFFFFF;font-size:0.95rem;line-height:1.75;display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(255,255,255,0.2)"><span style="color:#7DDA7D;font-weight:700;flex-shrink:0">✓</span>Limit alcohol and avoid smoking</li>
+      <li style="color:#FFFFFF;font-size:0.95rem;line-height:1.75;display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(255,255,255,0.2)"><span style="color:#7DDA7D;font-weight:700;flex-shrink:0">✓</span>Monitor your blood pressure regularly at home</li>
+      <li style="color:#FFFFFF;font-size:0.95rem;line-height:1.75;display:flex;align-items:flex-start;gap:0.75rem"><span style="color:#7DDA7D;font-weight:700;flex-shrink:0">✓</span>Always work with a healthcare professional for medical guidance</li>
+    </ul>
+  </div>
+  <h2>The Role of Nutrition</h2>
+  <p>The DASH diet — Dietary Approaches to Stop Hypertension — is one of the most evidence-supported eating patterns for blood pressure management. It emphasises whole grains, fruits, vegetables, low-fat dairy, lean proteins, and limits sodium, red meat, and added sugars.</p>
+  <p>Key nutrients with particular relevance to blood pressure include <strong>potassium</strong> (counteracts sodium's effects), <strong>magnesium</strong> (supports vessel relaxation), and <strong>omega-3 fatty acids</strong> (support healthy inflammation levels and vascular function).</p>
+
+  <div class="product-rec">
+    <div class="product-rec-icon">🐟</div>
+    <div class="product-rec-content">
+      <div class="product-rec-label">Wellness Support</div>
+      <div class="product-rec-name">Forever Arctic Sea Omega-3</div>
+      <div class="product-rec-desc">A balanced blend of EPA, DHA omega-3 and omega-9 fatty acids from salmon and olive oil. As part of a balanced diet, omega-3 fatty acids are associated with supporting healthy cardiovascular function and normal cholesterol levels.</div>
+      <button class="product-rec-btn" onclick="redirectToProduct('arctic-sea')">Explore Product →</button>
+      <div class="product-rec-disclaimer">*Nutritional supplement. Not intended to diagnose, treat, or cure any disease. Always consult your healthcare provider for blood pressure management.</div>
+    </div>
+  </div>
+
+  <div class="article-disclaimer">
+    <strong>Educational Disclaimer:</strong> This article is for general educational purposes only and does not constitute medical advice. High blood pressure is a serious medical condition requiring professional assessment and management. Please consult a qualified healthcare professional before making any changes to your diet, lifestyle, or medication.
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Can high blood pressure be reversed naturally?</div>
+      <div class="faq-a">For elevated and Stage 1 hypertension, consistent lifestyle changes — dietary improvement, exercise, weight management, and stress reduction — can bring readings into a normal range for many people. Stage 2 hypertension typically requires medical management alongside lifestyle changes. Always work with a healthcare professional.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How often should I check my blood pressure?</div>
+      <div class="faq-a">If your blood pressure is normal, checking annually at a clinic is sufficient. If elevated or high, more frequent monitoring — weekly or as advised by your doctor — is recommended. Home blood pressure monitors are affordable and can provide useful daily insight. Always measure at the same time of day after resting for 5 minutes.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Does stress directly cause high blood pressure?</div>
+      <div class="faq-a">Stress causes temporary spikes in blood pressure. Chronic stress, however, can contribute to sustained elevation through repeated hormonal responses, disrupted sleep, and stress-related behaviours like poor eating and inactivity. Managing chronic stress is an important part of long-term blood pressure care.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What foods should I avoid with high blood pressure?</div>
+      <div class="faq-a">The main dietary priorities are reducing sodium (processed foods, tinned goods, fast food, salty snacks), limiting saturated fats, reducing alcohol, and minimising added sugars. Increasing potassium-rich foods like bananas, spinach, and avocado helps counteract sodium's effects.</div>
+    </div>
+  </div>
+
+  <div class="author-bio">
+    <div class="author-bio-avatar">
+      <img src="../media/NaturesCornerProfilePics5.png" alt="Nature's Corner" onerror="this.parentElement.innerHTML='<span style=\'font-family:var(--ff-display);font-size:1.2rem;color:var(--sage-deep)\'>NC</span>'">
+    </div>
+    <div class="author-bio-content">
+      <div class="author-bio-label">About the Author</div>
+      <div class="author-bio-name">Nature's Corner</div>
+      <p class="author-bio-text">Nature's Corner is a wellness education platform dedicated to helping people build healthier lives through knowledge, nutrition, and preventive lifestyle habits. As a Forever Living Products Business Owner, our mission is to educate first and empower people to make better daily health choices.</p>
+    </div>
+  </div>
+</div>
+
+<div class="related-section">
+  <div class="related-inner">
+    <div style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:0.5rem">Continue Reading</div>
+    <h2 style="font-family:var(--ff-display);font-size:2rem;font-weight:300;color:var(--text-dark)">Related Health Articles</h2>
+    <div class="related-grid">
+      <a class="related-card" href="article-immune.html">
+        <div class="related-img" style="background:linear-gradient(135deg,#C8DEC2,#8FAB91)">🛡️</div>
+        <div class="related-content"><div class="related-cat">Immune Health</div><div class="related-title">7 Daily Habits That Silently Weaken Your Immune System</div></div>
+      </a>
+      <a class="related-card" href="article-gut-health.html">
+        <div class="related-img" style="background:linear-gradient(135deg,#DED4C2,#BEAA8A)">🌱</div>
+        <div class="related-content"><div class="related-cat">Digestive Health</div><div class="related-title">The Gut-Health Connection: Why Your Digestion Shapes Everything</div></div>
+      </a>
+      <a class="related-card" href="article-ageing.html">
+        <div class="related-img" style="background:linear-gradient(135deg,#E2D0E8,#C4A8D4)">✨</div>
+        <div class="related-content"><div class="related-cat">Healthy Ageing</div><div class="related-title">Ageing Gracefully: Nutritional Pillars for Vitality After 50</div></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Nature's Corner</div>
+  <div style="font-size:0.8rem;color:rgba(255,255,255,0.4);margin-top:0.25rem">Health Education & Wellness Support</div>
+  <div class="footer-note">The information on this website is for educational purposes only and is not intended as medical advice. Products mentioned are nutritional supplements designed to support overall wellness and should not replace professional medical care. Always consult a qualified healthcare professional regarding any medical concerns.</div>
+  <div style="margin-top:1.5rem;font-size:0.75rem;color:rgba(255,255,255,0.25)">© 2025 Nature's Corner. All rights reserved.</div>
+</footer>
+
+<div class="float-wa" onclick="window.open('https://wa.me/2348XXXXXXXXX','_blank')" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.1 1.524 5.818L.057 23.928 6.29 22.5A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.914 0-3.705-.508-5.254-1.394l-.376-.224-3.896.919.976-3.817-.244-.394A9.965 9.965 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</div>
+<script>
+window.addEventListener('scroll',()=>{const w=document.body.scrollTop||document.documentElement.scrollTop;const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;document.getElementById('progressBar').style.width=(w/h*100)+'%'});
+function toggleFaq(el){el.classList.toggle('open');el.nextElementSibling.classList.toggle('show')}
+function shareArticle(p){const u=encodeURIComponent(window.location.href);const t=encodeURIComponent("Understanding Blood Pressure — Nature's Corner Wellness");const urls={whatsapp:`https://wa.me/?text=${t}%20${u}`,facebook:`https://www.facebook.com/sharer/sharer.php?u=${u}`,twitter:`https://twitter.com/intent/tweet?text=${t}&url=${u}`};window.open(urls[p],'_blank')}
+const FLP_COUNTRY_STORES={NG:'https://foreverliving.com/nga/en-ng/home',GH:'https://foreverliving.com/gha/en-us/home',KE:'https://foreverliving.com/ken/en-us/home',ZA:'https://foreverliving.com/zaf/en-us/home',TZ:'https://foreverliving.com/tza/en-us/home',UG:'https://foreverliving.com/uga/en-us/home',RW:'https://foreverliving.com/rwa/en-us/home',CM:'https://foreverliving.com/cmr/en-us/home',SN:'https://foreverliving.com/sen/en-us/home',CI:'https://foreverliving.com/civ/en-us/home',GB:'https://thealoeveraco.shop',DE:'https://foreverliving.com/deu/de-de/home',FR:'https://foreverliving.com/fra/fr-fr/home',US:'https://foreverliving.com/usa/en-us/home',CA:'https://foreverliving.com/can/en-ca/home',IN:'https://foreverliving.com/ind/en-in/home',AE:'https://foreverliving.com/are/en-us/home',DEFAULT:'https://thealoeveraco.shop'};
+const FLP_UK_PRODUCTS={'aloe-vera-gel':'https://thealoeveraco.shop/FScoOcTb','arctic-sea':'https://thealoeveraco.shop/cW05Ymko','b12-plus':'https://thealoeveraco.shop/W9NN3ZVD','forever-daily':'https://thealoeveraco.shop/wyN8blWI','womens-vitolize':'https://thealoeveraco.shop/NZZ3PC09','forever-fiber':'https://thealoeveraco.shop/osMs0YkM'};
+async function redirectToProduct(k){let d=FLP_COUNTRY_STORES['DEFAULT'];try{const r=await fetch('https://ipwho.is/');const data=await r.json();const cc=data.country_code||data.country;if(cc==='GB'){d=FLP_UK_PRODUCTS[k]||FLP_COUNTRY_STORES['GB']}else if(FLP_COUNTRY_STORES[cc]){d=FLP_COUNTRY_STORES[cc]}}catch(e){}window.open(d,'_blank')}
+</script>
+</body>
+</html>

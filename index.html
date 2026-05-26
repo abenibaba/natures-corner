@@ -343,18 +343,18 @@
   <div class="topics-inner">
     <div style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);margin-bottom:1rem;font-weight:500">Browse Health Topics</div>
     <div class="topics-track">
-      <div class="topic-chip">Immune Health</div>
-      <div class="topic-chip">High Blood Pressure</div>
-      <div class="topic-chip">Diabetes Awareness</div>
-      <div class="topic-chip">Digestive Health</div>
-      <div class="topic-chip">Men's Health</div>
-      <div class="topic-chip">Women's Health</div>
-      <div class="topic-chip">Healthy Ageing</div>
-      <div class="topic-chip">Energy & Fatigue</div>
-      <div class="topic-chip">Stress & Sleep</div>
-      <div class="topic-chip">Heart Health</div>
-      <div class="topic-chip">Nutrition</div>
-      <div class="topic-chip">Preventive Wellness</div>
+      <div class="topic-chip" onclick="window.location.href='articles/article-immune.html'" style="cursor:pointer">Immune Health</div>
+      <div class="topic-chip" onclick="window.location.href='articles/article-blood-pressure.html'" style="cursor:pointer">High Blood Pressure</div>
+      <div class="topic-chip" onclick="window.location.href='articles/coming-soon.html'" style="cursor:pointer">Diabetes Awareness</div>
+      <div class="topic-chip" onclick="window.location.href='articles/article-gut-health.html'" style="cursor:pointer">Digestive Health</div>
+      <div class="topic-chip" onclick="window.location.href='articles/article-mens-health.html'" style="cursor:pointer">Men's Health</div>
+      <div class="topic-chip" onclick="window.location.href='articles/article-womens-health.html'" style="cursor:pointer">Women's Health</div>
+      <div class="topic-chip" onclick="window.location.href='articles/article-ageing.html'" style="cursor:pointer">Healthy Ageing</div>
+      <div class="topic-chip" onclick="window.location.href='articles/coming-soon.html'" style="cursor:pointer">Energy & Fatigue</div>
+      <div class="topic-chip" onclick="window.location.href='articles/coming-soon.html'" style="cursor:pointer">Stress & Sleep</div>
+      <div class="topic-chip" onclick="window.location.href='articles/article-blood-pressure.html'" style="cursor:pointer">Heart Health</div>
+      <div class="topic-chip" onclick="window.location.href='articles/coming-soon.html'" style="cursor:pointer">Nutrition</div>
+      <div class="topic-chip" onclick="window.location.href='articles/coming-soon.html'" style="cursor:pointer">Preventive Wellness</div>
     </div>
   </div>
 </div>
@@ -364,11 +364,11 @@
   <div class="section-label">Weekly Health Awareness</div>
   <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap">
     <h2 class="section-title" style="margin-bottom:0">Latest Health Articles</h2>
-    <button class="btn-outline" style="flex-shrink:0">View All Articles</button>
+    <button class="btn-outline" style="flex-shrink:0" onclick="document.getElementById('articles').scrollIntoView({behavior:'smooth'})">View All Articles</button>
   </div>
   <div class="articles-grid">
     
-    <div class="article-card">
+    <div class="article-card" onclick="window.location.href='articles/article-immune.html'" style="cursor:pointer">
       <div class="article-img article-img-green">
         <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:70px;opacity:0.6">
           <circle cx="40" cy="30" r="18" fill="white" opacity="0.4"/>
@@ -382,10 +382,10 @@
       </div>
       <div class="article-title">7 Daily Habits That Silently Weaken Your Immune System</div>
       <div class="article-excerpt">From poor sleep to chronic stress — discover the everyday patterns that could be undermining your body's natural defences and what you can do today.</div>
-      <div class="article-cta">Read Article </div>
-    </div>
+      <!-- Article 1 -->
+      <div class="article-cta" onclick="window.location.href='articles/article-immune.html'" style="cursor:pointer">Read Article </div></div>
     
-    <div class="article-card">
+    <div class="article-card" onclick="window.location.href='articles/article-blood-pressure.html'" style="cursor:pointer">
       <div class="article-img article-img-blue">
         <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:70px;opacity:0.6">
           <path d="M40 15 L55 35 L40 65 L25 35Z" fill="white" opacity="0.4"/>
@@ -398,10 +398,9 @@
       </div>
       <div class="article-title">Understanding Blood Pressure: What the Numbers Really Mean</div>
       <div class="article-excerpt">High blood pressure affects millions silently. This guide breaks down what your readings mean, what triggers it, and how lifestyle plays a central role.</div>
-      <div class="article-cta">Read Article </div>
-    </div>
+      <div class="article-cta" onclick="window.location.href='articles/article-blood-pressure.html'" style="cursor:pointer">Read Article </div></div>
     
-    <div class="article-card">
+    <div class="article-card" onclick="window.location.href='articles/article-gut-health.html'" style="cursor:pointer">
       <div class="article-img article-img-gold">
         <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:70px;opacity:0.6">
           <rect x="25" y="20" width="30" height="40" rx="8" fill="white" opacity="0.35"/>
@@ -415,10 +414,9 @@
       </div>
       <div class="article-title">The Gut-Health Connection: Why Your Digestion Shapes Everything</div>
       <div class="article-excerpt">Emerging research reveals how gut health influences mood, immunity, energy, and even weight. Here's what a healthy microbiome really looks like.</div>
-      <div class="article-cta">Read Article </div>
-    </div>
+      <div class="article-cta" onclick="window.location.href='articles/article-gut-health.html'" style="cursor:pointer">Read Article </div></div>
     
-    <div class="article-card">
+    <div class="article-card" onclick="window.location.href='articles/article-womens-health.html'" style="cursor:pointer">
       <div class="article-img" style="background:linear-gradient(135deg,#E2D0E8,#C4A8D4)">
         <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:70px;opacity:0.6">
           <path d="M40 20 C30 20 22 28 22 38 C22 52 40 62 40 62 C40 62 58 52 58 38 C58 28 50 20 40 20Z" fill="white" opacity="0.35"/>
@@ -430,10 +428,9 @@
       </div>
       <div class="article-title">Hormonal Balance After 35: What Every Woman Should Know</div>
       <div class="article-excerpt">Hormonal shifts in mid-life are natural, but they don't have to disrupt your life. Lifestyle strategies that support balance and wellbeing.</div>
-      <div class="article-cta">Read Article </div>
-    </div>
+      <div class="article-cta" onclick="window.location.href='articles/article-womens-health.html'" style="cursor:pointer">Read Article </div></div>
     
-    <div class="article-card">
+    <div class="article-card" onclick="window.location.href='articles/article-mens-health.html'" style="cursor:pointer">
       <div class="article-img" style="background:linear-gradient(135deg,#D0E8D8,#A8CDB4)">
         <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:70px;opacity:0.6">
           <circle cx="32" cy="35" r="12" fill="white" opacity="0.35"/>
@@ -447,10 +444,9 @@
       </div>
       <div class="article-title">Prostate Health: Prevention Strategies Men Often Overlook</div>
       <div class="article-excerpt">A proactive approach to prostate wellness through diet, exercise, and key nutritional factors. What the research says and how to start today.</div>
-      <div class="article-cta">Read Article </div>
-    </div>
+      <div class="article-cta" onclick="window.location.href='articles/article-mens-health.html'" style="cursor:pointer">Read Article </div></div>
     
-    <div class="article-card">
+    <div class="article-card" onclick="window.location.href='articles/article-ageing.html'" style="cursor:pointer">
       <div class="article-img" style="background:linear-gradient(135deg,#E8DEC8,#D4C49C)">
         <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" style="width:70px;opacity:0.6">
           <path d="M20 40 L30 20 L40 45 L50 30 L60 40 L60 60 L20 60Z" fill="white" opacity="0.35"/>
@@ -463,8 +459,7 @@
       </div>
       <div class="article-title">Ageing Gracefully: Nutritional Pillars for Vitality After 50</div>
       <div class="article-excerpt">Healthy ageing isn't about reversing the clock — it's about supporting your body's changing needs with the right nutrients, movement, and mindset.</div>
-      <div class="article-cta">Read Article </div>
-    </div>
+      <div class="article-cta" onclick="window.location.href='articles/article-ageing.html'" style="cursor:pointer">Read Article </div></div>
     
   </div>
 </section>
@@ -641,7 +636,7 @@
 <section id="about" style="padding-top:2rem">
   <div class="about-strip">
     <div class="about-img-area" style="padding:0;overflow:hidden">
-      <img src="NaturesCornerProfilePics5.png" alt="Nature's Corner" style="width:100%;height:100%;object-fit:cover;border-radius:24px 24px 80px 24px;">
+      <img src="media/NaturesCornerProfilePics5.png" alt="Nature's Corner" style="width:100%;height:100%;object-fit:cover;border-radius:24px 24px 80px 24px;">
       <div class="about-floating top-right">
         <strong>3× Weekly</strong>
         <span>Published every week</span>
@@ -840,31 +835,31 @@
       <div class="footer-col">
         <h4>Articles</h4>
         <ul class="footer-links">
-          <li><a>Immune Health</a></li>
-          <li><a>Heart Health</a></li>
-          <li><a>Digestive Wellness</a></li>
-          <li><a>Women's Health</a></li>
-          <li><a>Men's Health</a></li>
-          <li><a>Healthy Ageing</a></li>
+          <li><a href="articles/article-immune.html">Immune Health</a></li>
+          <li><a href="articles/article-blood-pressure.html">Heart Health</a></li>
+          <li><a href="articles/article-gut-health.html">Digestive Wellness</a></li>
+          <li><a href="articles/article-womens-health.html">Women's Health</a></li>
+          <li><a href="articles/article-mens-health.html">Men's Health</a></li>
+          <li><a href="articles/article-ageing.html">Healthy Ageing</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Platform</h4>
         <ul class="footer-links">
-          <li><a>Home</a></li>
-          <li><a>About Us</a></li>
-          <li><a>Wellness Support</a></li>
-          <li><a>Newsletter</a></li>
-          <li><a>WhatsApp Community</a></li>
-          <li><a>Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Wellness Support</a></li>
+          <li><a href="#newsletter-section">Newsletter</a></li>
+          <li><a href="https://wa.me/2347038801942" target="_blank">WhatsApp Community</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
         <ul class="footer-links">
-          <li><a>Disclaimer</a></li>
-          <li><a>Privacy Policy</a></li>
-          <li><a>Terms of Use</a></li>
+          <li><a href="legal/terms-of-use.html">Disclaimer</a></li>
+          <li><a href="legal/privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="legal/disclaimer.html">Terms of Use</a></li>
         </ul>
         <div style="margin-top:1.5rem">
           <h4>Connect</h4>
@@ -878,11 +873,11 @@
       </div>
     </div>
     <div style="font-size:0.72rem;line-height:1.7;color:rgba(255,255,255,0.25);margin-bottom:1.5rem;padding:1rem;background:rgba(255,255,255,0.04);border-radius:8px">
-      <strong style="color:rgba(255,255,255,0.35)">Disclaimer:</strong> The information on this website is for educational purposes only and is not intended as medical advice. Products mentioned are nutritional supplements designed to support overall wellness and should not replace professional medical care. Results may vary. Always consult a qualified healthcare professional regarding any medical coNature's<span style="color:var(--earth-light)"> </span>Cornererns or before beginning any supplement programme.
+      <strong style="color:rgba(255,255,255,0.35)">Disclaimer:</strong> The information on this website is for educational purposes only and is not intended as medical advice. Products mentioned are nutritional supplements designed to support overall wellness and should not replace professional medical care. Results may vary. Always consult a qualified healthcare professional regarding any medical concerns or before beginning any supplement programme.
     </div>
     <div class="footer-bottom">
       <div>© 2025 Nature's Corner. All rights reserved.</div>
-      <div style="color:rgba(255,255,255,0.25)">Wellness Education · Nutrition GuidaNature's<span style="color:var(--earth-light)"> </span>Cornere · Preventive Health</div>
+      <div style="color:rgba(255,255,255,0.25)">Wellness Education · Nutrition Guidance · Preventive Health</div>
     </div>
   </div>
 </footer>
