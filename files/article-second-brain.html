@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Second Brain: How Your Gut Health Controls Your Daily Mood | Nature's Corner</title>
+<meta name="description" content="Unexplained anxiety or low mood? Emerging science reveals that 95% of your serotonin is made in your gut. Discover how to heal your second brain and lift your mood naturally.">
+<meta name="keywords" content="gut brain connection, gut health mood, serotonin gut, vagus nerve gut brain axis, second brain, gut microbiome anxiety, three color rule">
+<meta property="og:title" content="The Second Brain: How Your Gut Health Controls Your Daily Mood">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --sage:#5C7A5F;--sage-light:#8FAB91;--sage-pale:#EEF4EE;--sage-deep:#3A5C3D;
+  --cream:#F9F6F0;--warm-white:#FDFCF9;--text-dark:#1A2420;--text-mid:#4A5C50;--text-light:#8A9E8E;
+  --accent:#C4874A;--border:#E4EDE4;
+  --gut:#6B5EA8;--gut-light:#A898D8;--gut-pale:#F2F0FA;
+  --ff-display:'Cormorant Garamond',Georgia,serif;--ff-body:'DM Sans','Segoe UI',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff-body);color:var(--text-dark);background:var(--warm-white);overflow-x:hidden;font-size:17px;line-height:1.8}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(253,252,249,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 5%}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1200px;margin:0 auto}
+.logo{font-family:var(--ff-display);font-size:1.4rem;font-weight:400;color:var(--sage-deep);text-decoration:none}.logo span{color:var(--accent)}
+.nav-back{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.85rem;color:var(--text-mid);text-decoration:none}.nav-back::before{content:'←'}.nav-back:hover{color:var(--sage-deep)}
+.nav-cta{background:var(--sage);color:white;border:none;padding:0.5rem 1.2rem;border-radius:24px;font-family:var(--ff-body);font-size:0.8rem;font-weight:500;cursor:pointer;text-decoration:none}.nav-cta:hover{background:var(--sage-deep)}
+.article-hero{max-width:800px;margin:0 auto;padding:8rem 5% 3rem;animation:fadeUp 0.7s ease both}
+.article-category-row{display:flex;align-items:center;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.article-cat-badge{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:white;background:var(--gut);padding:0.35rem 0.9rem;border-radius:20px;font-weight:500}
+.article-read-time,.article-date{font-size:0.8rem;color:var(--text-light)}
+h1.article-title{font-family:var(--ff-display);font-size:3.2rem;font-weight:300;line-height:1.15;color:var(--text-dark);margin-bottom:1.25rem}
+.article-subtitle{font-size:1.1rem;line-height:1.75;color:var(--text-mid);margin-bottom:2rem;font-weight:300}
+.article-author-row{display:flex;align-items:center;gap:1rem;padding:1.25rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:2.5rem}
+.author-avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;background:var(--sage-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.author-avatar img{width:100%;height:100%;object-fit:cover}
+.author-name{font-size:0.9rem;font-weight:500;color:var(--text-dark)}.author-title{font-size:0.78rem;color:var(--text-light)}
+.share-row{display:flex;align-items:center;gap:0.6rem;margin-left:auto}
+.share-btn{width:34px;height:34px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--text-mid);cursor:pointer;transition:all 0.2s;background:white;text-decoration:none}.share-btn:hover{border-color:var(--gut);color:var(--gut)}
+.article-hero-img{max-width:800px;margin:0 auto;padding:0 5%;animation:fadeUp 0.7s ease 0.15s both}
+.hero-img-area{background:linear-gradient(160deg,#2A1A4A 0%,#3A2A6A 40%,#4A3A7A 100%);border-radius:24px;height:420px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero-img-content{text-align:center;position:relative;z-index:1}
+.hero-img-icon{font-size:4rem;margin-bottom:1rem;display:block}
+.hero-img-label{font-family:var(--ff-display);font-size:1.8rem;font-weight:300;color:rgba(255,255,255,0.9);font-style:italic}
+.article-body{max-width:720px;margin:0 auto;padding:3rem 5% 5rem;animation:fadeUp 0.7s ease 0.25s both}
+.key-takeaway{background:var(--gut-pale);border-left:4px solid var(--gut);border-radius:0 16px 16px 0;padding:1.5rem 1.75rem;margin:2.5rem 0}
+.key-takeaway-label{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gut);font-weight:500;margin-bottom:0.5rem}
+.key-takeaway p{font-size:0.95rem;line-height:1.75;color:var(--text-mid);font-style:italic}
+.section-card{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin:2rem 0;transition:box-shadow 0.2s;position:relative;overflow:hidden}
+.section-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gut),var(--gut-light))}
+.section-card:hover{box-shadow:0 8px 32px rgba(107,94,168,0.1)}
+.section-card-icon{font-size:1.75rem;margin-bottom:0.75rem;display:block}
+.section-card-title{font-family:var(--ff-display);font-size:1.5rem;font-weight:400;color:var(--text-dark);margin-bottom:0.75rem}
+.section-card-body{font-size:0.95rem;line-height:1.8;color:var(--text-mid)}
+.habit-tip{display:flex;align-items:flex-start;gap:0.6rem;background:var(--cream);border-radius:10px;padding:0.85rem 1rem;margin-top:1.1rem;font-size:0.875rem;color:var(--text-mid);line-height:1.65}.habit-tip::before{content:'💡';flex-shrink:0}
+.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin:2.5rem 0}
+.stat-card{background:var(--gut-pale);border-radius:20px;padding:1.75rem;text-align:center;border:1px solid rgba(107,94,168,0.15)}
+.stat-num{font-family:var(--ff-display);font-size:2.8rem;font-weight:300;color:var(--gut);line-height:1;margin-bottom:0.4rem}
+.stat-label{font-size:0.8rem;color:var(--text-mid);line-height:1.5}
+.color-rule-box{background:var(--sage-deep);border-radius:20px;padding:2.5rem;margin:3rem 0;color:white}
+.color-rule-label{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.75rem}
+.color-rule-title{font-family:var(--ff-display);font-size:2rem;font-weight:300;color:white;margin-bottom:0.5rem;font-style:italic}
+.color-rule-sub{font-size:0.9rem;color:rgba(255,255,255,0.7);margin-bottom:2rem}
+.color-items{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.color-item{border-radius:16px;padding:1.5rem;text-align:center}
+.color-item-blue{background:rgba(58,127,166,0.3)}
+.color-item-green{background:rgba(92,122,95,0.3)}
+.color-item-orange{background:rgba(196,135,74,0.3)}
+.color-item-icon{font-size:2rem;margin-bottom:0.75rem;display:block}
+.color-item-name{font-weight:500;color:white;font-size:0.9rem;margin-bottom:0.4rem}
+.color-item-example{font-size:0.78rem;color:rgba(255,255,255,0.65);line-height:1.5}
+.color-item-benefit{font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:0.4rem;font-style:italic}
+.pull-quote{border-top:2px solid var(--gut-light);border-bottom:2px solid var(--gut-light);padding:2rem 0;margin:3rem 0;text-align:center}
+.pull-quote blockquote{font-family:var(--ff-display);font-size:1.8rem;font-weight:300;font-style:italic;color:var(--gut);line-height:1.4}
+.pull-quote cite{display:block;font-size:0.8rem;color:var(--text-light);margin-top:0.75rem;letter-spacing:0.05em;text-transform:uppercase;font-style:normal}
+.article-body h2{font-family:var(--ff-display);font-size:2rem;font-weight:400;color:var(--text-dark);margin:3rem 0 1rem;line-height:1.25}
+.article-body p{font-size:1rem;line-height:1.85;color:var(--text-mid);margin-bottom:1.25rem}
+.article-body strong{color:var(--text-dark);font-weight:500}
+.summary-box{background:var(--sage-deep);border-radius:20px;padding:2.5rem;margin:3rem 0;color:white}
+.article-disclaimer{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;font-size:0.78rem;line-height:1.7;color:var(--text-light);margin:2rem 0}.article-disclaimer strong{color:var(--text-mid)}
+.product-rec{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin:3rem 0;display:flex;gap:1.5rem;align-items:flex-start;flex-wrap:wrap}
+.product-rec-icon{width:64px;height:64px;background:var(--gut-pale);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.75rem;flex-shrink:0}
+.product-rec-content{flex:1;min-width:220px}
+.product-rec-label{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gut);font-weight:500;margin-bottom:0.4rem}
+.product-rec-name{font-family:var(--ff-display);font-size:1.3rem;font-weight:400;color:var(--text-dark);margin-bottom:0.5rem}
+.product-rec-desc{font-size:0.875rem;line-height:1.7;color:var(--text-mid);margin-bottom:1rem}
+.product-rec-btn{display:inline-flex;align-items:center;gap:0.4rem;background:var(--sage);color:white;border:none;padding:0.65rem 1.3rem;border-radius:24px;font-family:var(--ff-body);font-size:0.8rem;font-weight:500;cursor:pointer;transition:background 0.2s;text-decoration:none}.product-rec-btn:hover{background:var(--sage-deep)}
+.product-rec-disclaimer{font-size:0.68rem;color:var(--text-light);margin-top:0.6rem;line-height:1.5}
+.newsletter-cta{background:var(--gut-pale);border:1px solid var(--gut-light);border-radius:20px;padding:2.5rem;margin:3rem 0;text-align:center}
+.newsletter-cta h3{font-family:var(--ff-display);font-size:1.6rem;font-weight:400;color:var(--text-dark);margin-bottom:0.5rem}
+.newsletter-cta p{font-size:0.9rem;color:var(--text-mid);margin-bottom:1.5rem;line-height:1.7}
+.nl-form{display:flex;gap:0.75rem;max-width:460px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.nl-input{flex:1;min-width:200px;border:1px solid var(--border);border-radius:28px;padding:0.8rem 1.2rem;font-family:var(--ff-body);font-size:0.875rem;outline:none;background:white}.nl-input:focus{border-color:var(--gut)}
+.nl-btn{background:var(--sage-deep);color:white;border:none;padding:0.8rem 1.5rem;border-radius:28px;font-family:var(--ff-body);font-size:0.875rem;font-weight:500;cursor:pointer;white-space:nowrap}.nl-btn:hover{background:var(--sage)}
+.nl-note{font-size:0.72rem;color:var(--text-light);margin-top:0.6rem}
+.faq-section{margin:3rem 0}.faq-item{border-bottom:1px solid var(--border);padding:1.25rem 0}
+.faq-q{font-weight:500;color:var(--text-dark);margin-bottom:0.6rem;font-size:0.95rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}.faq-q::after{content:'+';font-size:1.2rem;color:var(--sage);flex-shrink:0}.faq-q.open::after{transform:rotate(45deg)}
+.faq-a{font-size:0.9rem;line-height:1.8;color:var(--text-mid);display:none;padding-top:0.25rem}.faq-a.show{display:block}
+.author-bio{background:white;border:1px solid var(--border);border-radius:20px;padding:2rem;margin:3rem 0;display:flex;gap:1.5rem;align-items:flex-start;flex-wrap:wrap}
+.author-bio-avatar{width:70px;height:70px;border-radius:50%;overflow:hidden;flex-shrink:0;background:var(--sage-pale);display:flex;align-items:center;justify-content:center}
+.author-bio-avatar img{width:100%;height:100%;object-fit:cover}
+.author-bio-label{font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:0.3rem}
+.author-bio-name{font-family:var(--ff-display);font-size:1.3rem;font-weight:400;color:var(--text-dark);margin-bottom:0.5rem}
+.author-bio-text{font-size:0.875rem;line-height:1.75;color:var(--text-mid)}
+.related-section{background:var(--cream);padding:4rem 5%}.related-inner{max-width:800px;margin:0 auto}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem}
+.related-card{background:white;border-radius:16px;overflow:hidden;border:1px solid var(--border);cursor:pointer;transition:all 0.2s;text-decoration:none;display:block}.related-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(92,122,95,0.1)}
+.related-img{height:120px;display:flex;align-items:center;justify-content:center;font-size:2rem}
+.related-content{padding:1rem}.related-cat{font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:0.4rem}
+.related-title{font-family:var(--ff-display);font-size:1.05rem;font-weight:400;color:var(--text-dark);line-height:1.3}
+footer{background:var(--text-dark);color:rgba(255,255,255,0.5);padding:2.5rem 5%;text-align:center}
+.footer-logo{font-family:var(--ff-display);font-size:1.3rem;font-weight:400;color:var(--sage-light);margin-bottom:0.5rem}
+.footer-note{font-size:0.78rem;line-height:1.7;color:rgba(255,255,255,0.3);max-width:600px;margin:0.75rem auto 0}
+.float-wa{position:fixed;bottom:2rem;right:2rem;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,0.4);cursor:pointer;z-index:200;transition:all 0.2s}.float-wa:hover{transform:scale(1.1)}.float-wa svg{fill:white;width:24px;height:24px}
+.reading-progress{position:fixed;top:64px;left:0;right:0;height:3px;background:var(--border);z-index:99}.reading-progress-bar{height:100%;background:linear-gradient(90deg,var(--gut),var(--accent));width:0%;transition:width 0.1s linear}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:680px){h1.article-title{font-size:2.2rem}.hero-img-area{height:260px}.related-grid{grid-template-columns:1fr 1fr}.share-row{display:none}.pull-quote blockquote{font-size:1.4rem}.stat-row{grid-template-columns:1fr}.color-items{grid-template-columns:1fr}}
+@media(max-width:400px){.related-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="reading-progress"><div class="reading-progress-bar" id="progressBar"></div></div>
+<nav><div class="nav-inner">
+  <a href="../index.html" class="logo">Nature's<span> </span>Corner</a>
+  <a href="../index.html" class="nav-back">Back to Home</a>
+  <a href="../index.html#newsletter-section" class="nav-cta">Join Community</a>
+</div></nav>
+
+<div class="article-hero">
+  <div class="article-category-row">
+    <span class="article-cat-badge">Digestive Health</span>
+    <span class="article-read-time">⏱ 5 min read</span>
+    <span class="article-date">Published by Nature's Corner</span>
+  </div>
+  <h1 class="article-title">The Second Brain: How Your Gut Health Controls Your Daily Mood</h1>
+  <p class="article-subtitle">You wake up feeling a vague, heavy anxiety with no logical reason for it. Before you assume the problem lies in your head — emerging science suggests you may need to look much further down.</p>
+  <div class="article-author-row">
+    <div class="author-avatar"><img src="../media/NaturesCornerProfilePics5.png" alt="Nature's Corner" onerror="this.parentElement.style.fontFamily='serif';this.parentElement.innerHTML='NC'"></div>
+    <div><div class="author-name">Nature's Corner</div><div class="author-title">Wellness Education & Nutrition Guidance</div></div>
+    <div class="share-row">
+      <a class="share-btn" onclick="shareArticle('whatsapp')">wa</a>
+      <a class="share-btn" onclick="shareArticle('facebook')">fb</a>
+      <a class="share-btn" onclick="shareArticle('twitter')">tw</a>
+    </div>
+  </div>
+</div>
+
+<div class="article-hero-img">
+  <div class="hero-img-area">
+    <div style="position:absolute;inset:0;background:radial-gradient(circle at 40% 50%,rgba(168,152,216,0.25),transparent 60%)"></div>
+    <div class="hero-img-content">
+      <span class="hero-img-icon">🧠</span>
+      <div class="hero-img-label">Your Gut is Your Second Brain</div>
+    </div>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="key-takeaway">
+    <div class="key-takeaway-label">Key Takeaway</div>
+    <p>Your gut contains over 100 million neurons and produces 95 percent of your body's serotonin. When your microbiome is disrupted, it does not just affect digestion — it sends distress signals directly to your brain, triggering anxiety, brain fog, and low mood. Healing your gut is one of the most powerful things you can do for your mental wellbeing.</p>
+  </div>
+
+  <p>You wake up feeling a vague, heavy sense of anxiety. There is no logical reason for it — your career is stable, your relationships are healthy, and your schedule is manageable. Yet, an invisible cloud of mental fatigue and low mood shadows your entire morning. Automatically, you assume the problem lies entirely in your head, perhaps a chemical imbalance in your brain.</p>
+  <p>But you are looking in the completely wrong organ. Emerging science reveals that this emotional turbulence frequently originates much lower down — inside your <strong>digestive tract</strong>.</p>
+
+  <h2>The Numbers That Will Change How You Think About Your Gut</h2>
+
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-num">100M</div>
+      <div class="stat-label">Neurons lining your gut — more than your spinal cord</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">95%</div>
+      <div class="stat-label">Of your body's serotonin is manufactured in your gut</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">90%</div>
+      <div class="stat-label">Of vagus nerve signals travel upward — from gut to brain</div>
+    </div>
+  </div>
+
+  <h2>Meet Your Enteric Nervous System</h2>
+  <div class="section-card">
+    <span class="section-card-icon">🔬</span>
+    <div class="section-card-title">Why Scientists Call It the Second Brain</div>
+    <p class="section-card-body">For decades, we treated the gut as a simple processing tube meant only to digest food and eliminate waste. Today, neuroscientists refer to the gut as the <strong>Second Brain</strong>. Your gut is lined with over 100 million neurons — more than your entire spinal cord — forming a complex network known as the <strong>enteric nervous system</strong>.</p>
+    <p class="section-card-body" style="margin-top:0.75rem">This system communicates directly with your brain via the <strong>vagus nerve</strong>, creating a bidirectional superhighway called the gut-brain axis. Fascinatingly, this highway is not a one-way street. Roughly 90 percent of the nerve fibres in the vagus nerve are sending information upward from your gut to your brain — not the other way around. Your gut is, in very real terms, constantly talking to your mind.</p>
+    <div class="habit-tip">The enteric nervous system can function completely independently of the brain — it has its own reflexes and can sense, process, and respond to information without any input from the central nervous system. This is why gut feelings are neurologically real.</div>
+  </div>
+
+  <div class="section-card">
+    <span class="section-card-icon">🦠</span>
+    <div class="section-card-title">Your Microbiome — The Chemical Factories Within</div>
+    <p class="section-card-body">The true masters of your daily mood are the trillions of microbes living inside you, known as your <strong>gut microbiome</strong>. These bacteria are extraordinarily sophisticated chemical factories. They produce more than 30 different neurotransmitters, including an astonishing <strong>95 percent of your body's total supply of serotonin</strong> — the chemical most responsible for feelings of happiness, stability, and emotional calm.</p>
+    <p class="section-card-body" style="margin-top:0.75rem">When your microbiome becomes unbalanced — a state called <strong>dysbiosis</strong> — caused by a poor diet, processed foods, chronic stress, or overuse of antibiotics, the production of these mood-boosting chemicals plummets. Instead of sending signals of safety and contentment upward through the vagus nerve, an inflamed gut sends distress signals to your brain, directly triggering anxiety, brain fog, and depressive symptoms.</p>
+  </div>
+
+  <div class="pull-quote">
+    <blockquote>"Fix your diet to fix your mindset. Your brain is always listening to your stomach."</blockquote>
+    <cite>Nature's Corner Wellness Education</cite>
+  </div>
+
+  <h2>The Three-Colour Rule — Feeding Your Second Brain</h2>
+  <p>Healing your mood requires healing your ecosystem. To rebalance your second brain, you do not need an aggressive medical cleanse or an expensive supplement stack. Instead, begin with one powerful nutritional habit — the <strong>Three-Colour Rule</strong>.</p>
+  <p>Every single day, challenge yourself to eat three naturally distinct colours of plant-based foods. These varied colours represent diverse polyphenols and fibres, which act as specific prebiotics to feed different strains of beneficial gut bacteria. By intentionally diversifying your plate, you soothe the vagus nerve, reduce gut inflammation, and begin restoring your brain's serotonin supply from the inside out.</p>
+
+  <div class="color-rule-box">
+    <div class="color-rule-label">The Daily Practice</div>
+    <div class="color-rule-title">The Three-Colour Rule</div>
+    <div class="color-rule-sub">Eat three distinct colours of plant food every day to feed your microbiome diversity</div>
+    <div class="color-items">
+      <div class="color-item color-item-blue">
+        <span class="color-item-icon">🫐</span>
+        <div class="color-item-name">Deep Blues & Purples</div>
+        <div class="color-item-example">Blueberries, blackberries, red cabbage, aubergine</div>
+        <div class="color-item-benefit">Rich in anthocyanins — feed Lactobacillus strains</div>
+      </div>
+      <div class="color-item color-item-green">
+        <span class="color-item-icon">🥬</span>
+        <div class="color-item-name">Deep Greens</div>
+        <div class="color-item-example">Spinach, broccoli, kale, courgette, peas</div>
+        <div class="color-item-benefit">High in folate & magnesium — supports serotonin synthesis</div>
+      </div>
+      <div class="color-item color-item-orange">
+        <span class="color-item-icon">🍠</span>
+        <div class="color-item-name">Bright Oranges & Reds</div>
+        <div class="color-item-example">Sweet potato, carrots, tomatoes, red peppers</div>
+        <div class="color-item-benefit">Rich in beta-carotene — reduces gut inflammation</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="summary-box">
+    <h3 style="color:#FFFFFF !important;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.6rem;font-weight:300;font-style:italic;margin-bottom:1.25rem">Your Second Brain Action Plan</h3>
+    <ul style="list-style:none;margin:0">
+      <li style="color:#FFFFFF;font-size:0.95rem;line-height:1.75;display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(255,255,255,0.2)"><span style="color:#7DDA7D;font-weight:700;flex-shrink:0">✓</span>Apply the Three-Colour Rule — eat 3 distinct plant colours daily</li>
+      <li style="color:#FFFFFF;font-size:0.95rem;line-height:1.75;display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(255,255,255,0.2)"><span style="color:#7DDA7D;font-weight:700;flex-shrink:0">✓</span>Reduce ultra-processed foods — they promote harmful gut bacteria</li>
+      <li style="color:#FFFFFF;font-size:0.95rem;line-height:1.75;display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(255,255,255,0.2)"><span style="color:#7DDA7D;font-weight:700;flex-shrink:0">✓</span>Include fermented foods — yoghurt, kefir, sauerkraut regularly</li>
+      <li style="color:#FFFFFF;font-size:0.95rem;line-height:1.75;display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(255,255,255,0.2)"><span style="color:#7DDA7D;font-weight:700;flex-shrink:0">✓</span>Manage chronic stress — it directly disrupts gut-brain communication</li>
+      <li style="color:#FFFFFF;font-size:0.95rem;line-height:1.75;display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.6rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(255,255,255,0.2)"><span style="color:#7DDA7D;font-weight:700;flex-shrink:0">✓</span>Prioritise sleep — gut microbiome diversity drops within days of poor sleep</li>
+      <li style="color:#FFFFFF;font-size:0.95rem;line-height:1.75;display:flex;align-items:flex-start;gap:0.75rem"><span style="color:#7DDA7D;font-weight:700;flex-shrink:0">✓</span>Use antibiotics only when medically necessary — they reset the microbiome</li>
+    </ul>
+  </div>
+
+  <div class="product-rec">
+    <div class="product-rec-icon">🌱</div>
+    <div class="product-rec-content">
+      <div class="product-rec-label">Digestive Wellness Support</div>
+      <div class="product-rec-name">Forever Fiber</div>
+      <div class="product-rec-desc">A blend of four soluble fibres — including inulin, psyllium husk, and oat bran — designed to support healthy digestion and provide the prebiotic environment that beneficial gut bacteria need to thrive, complementing the Three-Colour Rule discussed in this article.</div>
+      <button class="product-rec-btn" onclick="redirectToProduct('forever-fiber')">Explore Product →</button>
+      <div class="product-rec-disclaimer">*Nutritional supplement. Not intended to diagnose, treat, or cure any disease. Consult your healthcare provider.</div>
+    </div>
+  </div>
+
+  <div class="newsletter-cta">
+    <h3>Fix Your Gut. Lift Your Mood. Every Week.</h3>
+    <p>Join the Nature's Corner inner circle for one science-backed wellness habit delivered straight to your inbox every week. No spam. Just better health.</p>
+    <div class="nl-form">
+      <input class="nl-input" type="email" placeholder="Your email address">
+      <button class="nl-btn">Join Free</button>
+    </div>
+    <div class="nl-note">Free forever. Unsubscribe anytime.</div>
+  </div>
+
+  <div class="article-disclaimer">
+    <strong>Educational Disclaimer:</strong> This article is for general educational purposes only and does not constitute medical advice. If you are experiencing persistent anxiety, low mood, or digestive symptoms, please consult a qualified healthcare professional.
+  </div>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How quickly can improving gut health affect mood?</div>
+      <div class="faq-a">Dietary changes can begin shifting gut microbiome composition within three to four days. However, meaningful improvements in mood-related symptoms typically take four to eight weeks of consistent dietary changes. The key is sustained improvement rather than rapid intervention — the microbiome responds to patterns, not individual meals.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Can gut health affect anxiety specifically?</div>
+      <div class="faq-a">Yes — significantly. Research shows that the gut microbiome influences GABA pathways — the brain's primary calming neurotransmitter system. Disrupted microbiomes are associated with reduced GABA signalling, which is directly linked to heightened anxiety responses. Multiple clinical studies have found that probiotic supplementation and dietary improvements reduced self-reported anxiety scores in healthy adults.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Is the Three-Colour Rule evidence-based?</div>
+      <div class="faq-a">The Three-Colour Rule is a practical application of well-established nutritional science. Research consistently shows that dietary diversity — measured by the variety of different plant foods consumed — is one of the strongest predictors of gut microbiome diversity. The American Gut Project, one of the largest citizen science studies, found that eating 30 or more different plant foods per week was associated with significantly greater microbiome diversity than eating 10 or fewer.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Should I take a probiotic supplement?</div>
+      <div class="faq-a">Probiotic supplements can be a useful addition, particularly after antibiotic use or during periods of digestive disruption. However, evidence suggests that dietary diversity — consistently eating a wide variety of whole plant foods — produces broader and more sustainable microbiome improvements than single-strain probiotic supplements. Food-based approaches are generally preferable as a foundation, with supplements used to address specific gaps.</div>
+    </div>
+  </div>
+
+  <div class="author-bio">
+    <div class="author-bio-avatar"><img src="../media/NaturesCornerProfilePics5.png" alt="Nature's Corner" onerror="this.parentElement.innerHTML='<span style=\'font-family:var(--ff-display);font-size:1.2rem;color:var(--sage-deep)\'>NC</span>'"></div>
+    <div>
+      <div class="author-bio-label">About the Author</div>
+      <div class="author-bio-name">Nature's Corner</div>
+      <p class="author-bio-text">Nature's Corner is a wellness education platform dedicated to helping people build healthier lives through knowledge, nutrition, and preventive lifestyle habits.</p>
+    </div>
+  </div>
+</div>
+
+<div class="related-section"><div class="related-inner">
+  <div style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:0.5rem">Continue Reading</div>
+  <h2 style="font-family:var(--ff-display);font-size:2rem;font-weight:300;color:var(--text-dark)">Related Health Articles</h2>
+  <div class="related-grid">
+    <a class="related-card" href="article-gut-health.html"><div class="related-img" style="background:linear-gradient(135deg,#DED4C2,#BEAA8A)">🌱</div><div class="related-content"><div class="related-cat">Digestive Health</div><div class="related-title">The Gut-Health Connection: Why Your Digestion Shapes Everything</div></div></a>
+    <a class="related-card" href="article-dehydration-brain-fog.html"><div class="related-img" style="background:linear-gradient(135deg,#1A4A6A,#3A8AAA)">💧</div><div class="related-content"><div class="related-cat">Energy & Fatigue</div><div class="related-title">The Silent Energy Thief: How Dehydration Mimics Brain Fog</div></div></a>
+    <a class="related-card" href="article-sleep-inertia.html"><div class="related-img" style="background:linear-gradient(135deg,#1A2840,#3A5470)">🌙</div><div class="related-content"><div class="related-cat">Stress & Sleep</div><div class="related-title">The Sleep Inertia Trap: Why Your Morning Routine is Making You Tired</div></div></a>
+  </div>
+</div></div>
+
+<footer>
+  <div class="footer-logo">Nature's Corner</div>
+  <div style="font-size:0.8rem;color:rgba(255,255,255,0.4);margin-top:0.25rem">Health Education & Wellness Support</div>
+  <div class="footer-note">The information on this website is for educational purposes only and is not intended as medical advice. Always consult a qualified healthcare professional regarding any medical concerns.</div>
+  <div style="margin-top:1.5rem;font-size:0.75rem;color:rgba(255,255,255,0.25)">© 2025 Nature's Corner. All rights reserved.</div>
+</footer>
+<div class="float-wa" onclick="window.open('https://wa.me/2347038801942','_blank')"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.117.554 4.1 1.524 5.818L.057 23.928 6.29 22.5A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.914 0-3.705-.508-5.254-1.394l-.376-.224-3.896.919.976-3.817-.244-.394A9.965 9.965 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg></div>
+<script>
+window.addEventListener('scroll',()=>{const w=document.body.scrollTop||document.documentElement.scrollTop;const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;document.getElementById('progressBar').style.width=(w/h*100)+'%'});
+function toggleFaq(el){el.classList.toggle('open');el.nextElementSibling.classList.toggle('show')}
+function shareArticle(p){const u=encodeURIComponent(window.location.href);const t=encodeURIComponent("The Second Brain: How Your Gut Controls Your Mood — Nature's Corner");const urls={whatsapp:`https://wa.me/?text=${t}%20${u}`,facebook:`https://www.facebook.com/sharer/sharer.php?u=${u}`,twitter:`https://twitter.com/intent/tweet?text=${t}&url=${u}`};window.open(urls[p],'_blank')}
+const FLP_COUNTRY_STORES={NG:'https://foreverliving.com/nga/en-ng/home',GH:'https://foreverliving.com/gha/en-us/home',KE:'https://foreverliving.com/ken/en-us/home',ZA:'https://foreverliving.com/zaf/en-us/home',TZ:'https://foreverliving.com/tza/en-us/home',UG:'https://foreverliving.com/uga/en-us/home',RW:'https://foreverliving.com/rwa/en-us/home',CM:'https://foreverliving.com/cmr/en-us/home',GB:'https://thealoeveraco.shop',US:'https://foreverliving.com/usa/en-us/home',DEFAULT:'https://thealoeveraco.shop'};
+const FLP_UK_PRODUCTS={'aloe-vera-gel':'https://thealoeveraco.shop/FScoOcTb','arctic-sea':'https://thealoeveraco.shop/cW05Ymko','b12-plus':'https://thealoeveraco.shop/W9NN3ZVD','forever-daily':'https://thealoeveraco.shop/wyN8blWI','womens-vitolize':'https://thealoeveraco.shop/NZZ3PC09','forever-fiber':'https://thealoeveraco.shop/osMs0YkM'};
+async function redirectToProduct(k){let d=FLP_COUNTRY_STORES['DEFAULT'];try{const r=await fetch('https://ipwho.is/');const data=await r.json();const cc=data.country_code||data.country;if(cc==='GB'){d=FLP_UK_PRODUCTS[k]||FLP_COUNTRY_STORES['GB']}else if(FLP_COUNTRY_STORES[cc]){d=FLP_COUNTRY_STORES[cc]}}catch(e){}window.open(d,'_blank')}
+</script>
+</body>
+</html>
